@@ -1,0 +1,1877 @@
+What topic should the crew research? 
+Running crew on: The difference between conversational AI chatbots and Agent AI
+------------------------------------------------------------
+
+╭─────────────────────────────────────────── ✨ Update Available ✨ ────────────────────────────────────────────╮
+│                                                                                                               │
+│  A new version of CrewAI is available!                                                                        │
+│                                                                                                               │
+│  Current version: 1.15.16                                                                                     │
+│  Latest version:  1.15.17                                                                                     │
+│                                                                                                               │
+│  To update, run: uv sync --upgrade-package crewai                                                             │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────────── 🚀 Crew Execution Started ──────────────────────────────────────────╮
+│                                                                                                               │
+│  Crew Execution Started                                                                                       │
+│  Name: crew                                                                                                   │
+│  ID: 6e68f91f-01d2-4da5-b7b8-0be1850c5dcd                                                                     │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────── 📋 Task Started ───────────────────────────────────────────────╮
+│                                                                                                               │
+│  Task Started                                                                                                 │
+│  Name: Research the topic: The difference between conversational AI chatbots and Agent AI                     │
+│                                                                                                               │
+│  Break it into 3-5 key sub-questions, and answer each one with specific, factual points. Note any areas of    │
+│  genuine uncertainty or debate rather than presenting them as settled.                                        │
+│  ID: ef40b5fd-a4d2-49a8-bd47-dc826db36d6f                                                                     │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────────────── 🤖 Agent Started ───────────────────────────────────────────────╮
+│                                                                                                               │
+│  Agent: Research Analyst                                                                                      │
+│                                                                                                               │
+│  Task: Research the topic: The difference between conversational AI chatbots and Agent AI                     │
+│                                                                                                               │
+│  Break it into 3-5 key sub-questions, and answer each one with specific, factual points. Note any areas of    │
+│  genuine uncertainty or debate rather than presenting them as settled.                                        │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#1) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'what is Agent AI vs chatbot'}                                                               │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#2) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'conversational AI chatbot definition capabilities'}                                         │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#3) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'difference between conversational AI chatbots and Agent AI'}                                │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#3) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "what is Agent AI vs chatbot",                                                                    │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "title": "AI Agent vs. Chatbot: What's the Difference?",                                               │
+│        "url": "https://www.chatbot.com/blog/ai-agent-vs-chatbot",                                             │
+│        "content": "A chatbot is a receptionist reading from a binder. An AI agent is a team member who's      │
+│  read every page on your website, studied your product catalog, internalized your brand voice, and can hold   │
+│  a conversation that actually moves the needle.\n\nan infographic explaining what is an ai agent [...] An AI  │
+│  agent is a fundamentally different animal. Where chatbots respond, AI agents resolve. Where chatbots follow  │
+│  a conversational flow you mapped out in advance, AI agents analyze complex situations, make independent      │
+│  decisions, and execute multi-step tasks to achieve a specific objective. [...] ### Scope of                  │
+│  capability\n\nChatbots handle simple tasks and predefined tasks within structured processes. AI agents       │
+│  handle complex tasks, multi-step processes, and context-aware interactions that require autonomous           │
+│  decision-making.\n\nA chatbot can tell a customer your return policy. An AI agent can process the return,    │
+│  recommend a replacement based on the customer's purchase history, and flag the product issue ...",           │
+│        "score": 0.92794675,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "7c12b2-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "title": "AI Agent vs Chatbot: Key Differences | Salesforce IN",                                       │
+│        "url": "https://www.salesforce.com/in/agentforce/ai-agent-vs-chatbot",                                 │
+│        "content": "## AI Agent vs. Chatbot FAQs\n\n### What is the core difference between an AI agent and a  │
+│  chatbot?\n\nAn AI agent is an autonomous system capable of reasoning, planning, and taking actions to        │
+│  achieve goals, while a chatbot is primarily designed for predefined conversational interaction, typically    │
+│  following scripts or generating text responses to routine questions.\n\n### What are the primary             │
+│  capabilities of an AI agent? [...] An AI agent is an advanced AI assistant designed to augment human         │
+│  capabilities across a wide range of tasks. Unlike more limited chatbots, AI agents (also known as            │
+│  autonomous agents) can understand and generate natural language, process and analyse large amounts of        │
+│  information, and assist with complex activities such as writing, coding, problem solving, and creative       │
+│  tasks. [...] If a chatbot is akin to a vending machine, an AI agent is like a personal chef with an          │
+│  impressive repertoire of recipes (vast knowledge base), an ability to understand complex dish requests       │
+│  (nat...",                                                                                                    │
+│        "score": 0.9159971,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "ea4009-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "title": "AI Agent vs. Chatbot \u2014 What\u2019s the Difference? | Salesforce",                       │
+│        "url": "https://www.salesforce.com/agentforce/ai-agent-vs-chatbot",                                    │
+│        "content": "## AI Agent vs. Chatbot FAQs\n\n### What is the core difference between an AI agent and a  │
+│  chatbot?\n\nAn AI agent is an autonomous system capable of reasoning, planning, and taking actions to        │
+│  achieve goals, while a chatbot is primarily designed for predefined conversational interaction, typically    │
+│  following scripts or generating text responses to routine questions.\n\n### What are the primary             │
+│  capabilities of an AI agent? [...] An AI agent is an advanced AI assistant designed to augment human         │
+│  capabilities across a wide range of tasks. Unlike more limited chatbots, AI agents (also known as            │
+│  autonomous agents) can understand and generate natural language, process and analyze large amounts of        │
+│  information, and assist with complex activities such as writing, coding, problem solving, and creative       │
+│  tasks. [...] If a chatbot is akin to a vending machine, an AI agent is like a personal chef with an          │
+│  impressive repertoire of recipes (vast knowledge base), an ability to understand complex dish requests       │
+│  (nat...",                                                                                                    │
+│        "score": 0.914176,                                                                                     │
+│        "raw_content": null,                                                                                   │
+│        "id": "1b3aaa-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "title": "AI Agent vs Chatbot: Key Differences and How to Choose",                                     │
+│        "url": "https://www.bolddesk.com/blogs/ai-agent-vs-chatbot",                                           │
+│        "content": "## AI agent vs chatbot: Aligning the right tool with your workflows\n\nThe real            │
+│  distinction between AI agents and chatbots lies in how much responsibility you want automation to take       │
+│  on.\n\nChatbots are ideal for handling predictable, high\u2011volume requests, while AI agents are better    │
+│  suited for resolving complex issues that require context, continuity, and action across systems. [...] At    │
+│  the core, the main difference between an AI agent and a chatbot is autonomy: chatbots respond to predefined  │
+│  inputs, while AI agents can plan, decide, and execute tasks independently across systems.\n\nIn this blog,   │
+│  we\u2019ll break down the key differences between an AI agent vs chatbot, walk through practical examples,   │
+│  and help you choose the right approach for your customer support needs.\n\n## What is an AI agent? [...]     │
+│  With the ability to make decisions and take independent actions to achieve specific goals, AI agents are     │
+│  ideal for dynamic environments like customer support, supply chain management, manufacturin...",             │
+│        "score": 0.9100432,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "368ee1-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "title": "AI Agent vs AI Chatbot: Key Differences Explained | DigitalOcean",                           │
+│        "url": "https://www.digitalocean.com/resources/articles/ai-agent-vs-ai-chatbot",                       │
+│        "content": "While both are instances of AI and ML at work, they\u2019re different applications. The    │
+│  first is an AI chatbot designed to simulate conversation and provide specific assistance or information.     │
+│  The second is an AI agent capable of autonomous decision-making and executing complex tasks across multiple  │
+│  domains. Chatbots date back to the 1960s with ELIZA, evolving from simple pattern matching to today\u2019s   │
+│  more sophisticated natural language processors. On the other hand, AI agents emerged more recently, [...]    │
+│  An AI chatbot is a software application designed to simulate human-like conversations through text or voice  │
+│  interactions. It uses natural language processing (NLP) and machine learning algorithms to understand user   │
+│  inputs and generate appropriate responses. [...] ## What is an AI agent?\n\nAn AI agent is a more advanced   │
+│  artificial intelligence system capable of performing complex tasks and making decisions with minimal human   │
+│  guidance. It uses sophisticated machine learning models, often includ...",                                   │
+│        "score": 0.90633047,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "b6640d-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.34,                                                                                     │
+│    "request_id": "48605976-f5da-4b44-a233-bf22c9742000"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#3) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "difference between conversational AI chatbots and Agent AI",                                     │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url": "https://www.cognigy.com/ai-agents/chatbot-vs-ai-agent",                                        │
+│        "title": "Chatbots vs AI Agents: What Is the Difference?",                                             │
+│        "content": "Understanding the difference between chatbots and AI Agents is quite simple: chatbots are  │
+│  a rule-based, input-dependent tool that can respond to queries, whereas AI Agents are flexible, intelligent  │
+│  systems that can communicate dynamically with users and carry out tasks. \n\n1. Chatbots, even those         │
+│  powered by AI, are entirely reactive and have little to no ability to carry out tasks.\n2. AI Agents are     │
+│  proactive and can break down complex customer needs, plan actions, and carry them out. [...] 1. NLU-Driven   │
+│  Conversational AI Agents: Process-driven agents that use NLU to understand customer intent and trigger       │
+│  predefined dialogue flows. They are more predictable and controllable, but they require more human           │
+│  oversight. [...] AI Agents are better suited for customer service, outbound calling, and agent copilots,     │
+│  offering fluid conversations, dynamic reasoning, and direct action through backend integrations.\n           │
+│  Enterprises like Henkel, BICS, and Lippert use AI chatbots for focused support, while B...",                 │
+│        "score": 0.9161773,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "05d4e3-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://devrev.ai/blog/chatbots-vs-conversational-ai",                                         │
+│        "title": "Chatbot vs Conversational AI: why the answer is neither | DevRev",                           │
+│        "content": "The pattern is the point: each generation is defined by what it can't do. Chatbots can't   │
+│  understand context. Conversational AI can't take action. Agentic AI removes both ceilings.\n\nUnderstanding  │
+│  the architectural difference between chatbots and AI agents comes down to one question: is the system        │
+│  read-only, or can it read and write? Everything else \u2013 resolution rates, memory, learning \u2013        │
+│  follows from that answer.\n\n## Is either one enough? [...] Gen 2 conversational AI understands intent and   │
+│  generates natural responses. It's a real improvement. But it's still read-only: it surfaces answers, drafts  │
+│  replies, and hands everything to a human to act on.\n\nGen 3 agentic AI reads, reasons, and writes back. It  │
+│  doesn't suggest a refund. It processes it.\n\nThe architectural difference comes down to one question: can   │
+│  your AI write back to your CRM, close a ticket, and update your engineering tools without a human            │
+│  completing each step? [...] Where chatbots and conversational AI are read-only retrieval ...",               │
+│        "score": 0.9020676,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "b13133-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.freshworks.com/freshdesk/ai-agent/vs-conversational-ai",                           │
+│        "title": "Agentic AI vs Conversational AI: Key Differences Explained",                                 │
+│        "content": "Virtually every industry can benefit, but customer service, eCommerce, banking,            │
+│  healthcare, travel, and SaaS stand out. For example, eCommerce brands use conversational AI for instant      │
+│  product inquiries and agentic AI for automating returns and refunds.\n\nBanks deploy chatbots for account    │
+│  queries while agentic AI handles loan applications or KYC checks. In healthcare, conversational AI assists   │
+│  with appointment booking, while agentic AI manages follow-ups, reminders, and patient record updates. [...]  │
+│  In essence, conversational AI is a type of AI agent that focuses on understanding and responding to          │
+│  queries, while agentic AI takes the next step by autonomously executing tasks and driving outcomes. The      │
+│  distinction between agentic AI vs AI agents lies in the level of autonomy: while conversational AI           │
+│  interacts, agentic AI takes action to achieve results. [...] May 26, 2026\n\nCan artificial intelligence     │
+│  only talk, or can it also think and act on its own?\n\nThat\u2019s the key distinction between con...",      │
+│        "score": 0.8976328,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "2b8882-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://quickchat.ai/post/ai-agent-vs-chatbot",                                                │
+│        "title": "AI Agent vs Chatbot (2026): Key Differences and Which ...",                                  │
+│        "content": "No. The difference is architectural. A chatbot follows a predefined script. An AI agent    │
+│  reasons about the task at runtime and decides what to do. This is similar to the distinction between a       │
+│  hardcoded `if/else` program and a system that uses a machine learning model to make decisions. They can      │
+│  appear similar from the outside (both conduct text conversations), but the internal mechanics and            │
+│  capabilities are different. [...] Chatbots typically store conversation state as a set of filled slots       │
+│  (e.g., `order_id=12345`, `intent=order_status`). AI agents need a richer memory model because they handle    │
+│  open-ended conversations where relevant information can appear at any point.\n\nMost AI agent                │
+│  implementations use multiple layers of context: [...] AI agents are the clear fit for most new               │
+│  conversational AI projects in 2026. A few scenarios where the gap between agents and rule-based chatbots is  │
+│  largest:\n\nComplex support requests that span multiple systems. The order-exchange example above is         │
+│  typi...",                                                                                                    │
+│        "score": 0.8969848,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "595140-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.salesforce.com/agentforce/ai-agent-vs-chatbot",                                    │
+│        "title": "AI Agent vs. Chatbot \u2014 What\u2019s the Difference? | Salesforce",                       │
+│        "content": "## AI Agent vs. Chatbot FAQs\n\n### What is the core difference between an AI agent and a  │
+│  chatbot?\n\nAn AI agent is an autonomous system capable of reasoning, planning, and taking actions to        │
+│  achieve goals, while a chatbot is primarily designed for predefined conversational interaction, typically    │
+│  following scripts or generating text responses to routine questions.\n\n### What are the primary             │
+│  capabilities of an AI agent? [...] Where chatbots largely follow rules-based dialogues and are limited to    │
+│  answering predefined questions, AI agents can reason and ground answers in relevant knowledge and content.   │
+│  Customer service chatbots, unlike agents, need extensive training on hundreds of utterances to be able to    │
+│  understand natural-language requests, making agents significantly quicker and easier to implement and        │
+│  launch. Additionally, agents don\u2019t require rule-based dialogs and configuration to call actions and     │
+│  guide the [...] An AI agent is an advanced AI assistant designed to augment human capabili...",              │
+│        "score": 0.88372874,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "4e00a9-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.59,                                                                                     │
+│    "request_id": "1f84911e-1b40-405b-856d-ae030bde32eb"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#3) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "conversational AI chatbot definition capabilities",                                              │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url": "https://www.liveperson.com/resources/reports/what-is-conversational-ai",                       │
+│        "title": "What is Conversational AI? Your Complete Guide | LivePerson",                                │
+│        "content": "Image 16\n### Scope\n\nConversational AI:Broader term encompassing various AI-driven       │
+│  systems capable of natural language interactions across multiple modalities.\n\nChatbots: A subset of        │
+│  conversational AI, typically referring to rule-based or scripted systems designed for specific               │
+│  tasks.\n\nImage 17\n### Capabilities\n\nConversational AI:Includes advanced natural language processing      │
+│  (NLP), ML, context awareness, intent recognition, personalization, and more, providing human-like            │
+│  interactions. [...] ### AI chatbots\n\nThose little bubbles that pop up in the corner of websites to ask if  │
+│  you need help? Yep, it turns out you\u2019ve probably already encountered a chatbot before. An AI chatbot    │
+│  is a computer program powered by artificial intelligence and natural language processing capabilities,       │
+│  designed to simulate human-like text or voice-based conversations. The underlying tech has gotten so good    │
+│  that you might not realize you\u2019re talking to a robot. [...] Conversational AI capabilities are          │
+│  essential for b...",                                                                                         │
+│        "score": 0.8657814,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "78bf5d-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://yellow.ai/blog/chatbot-vs-conversational-ai",                                          │
+│        "title": "Chatbots Vs Conversational AI - What's the Difference?",                                     │
+│        "content": "Conversational AI refers to the technology that integrates artificial intelligence,        │
+│  natural language processing (NLP), and machine learning (ML) to make chatbots smarter and capable of having  │
+│  more human-like conversations. Conversational AI agents get more efficient at spotting patterns and making   │
+│  recommendations over time through a process of continuous learning, as you build up a larger corpus of user  │
+│  inputs and conversations. [...] According to an MIT Technology Review report, more than 90% of businesses    │
+│  reported that they had seen significant improvements in complaint resolution, call processing, and customer  │
+│  and employee satisfaction with conversational AI chatbots. Conversational AI is enabling businesses to       │
+│  deliver more personal experiences to their users by having more fluid and intelligent conversations.         │
+│  Artificial intelligence, with its capabilities of comprehending natural language, active learning, dialogue  │
+│  flow [...] Customers reach out to different support channels with a...",                                     │
+│        "score": 0.8437023,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "6df2ed-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://aws.amazon.com/what-is/conversational-ai",                                             │
+│        "title": "What is Conversational AI? - Conversational AI Chatbots Explained - AWS",                    │
+│        "content": "Conversational AI chatbots can provide 24/7 support and immediate customer                 │
+│  response\u2014a service modern customers prefer and expect from all online systems. Instant response         │
+│  increases both customer satisfaction and the frequency of engagement with the brand.\n\nAdditionally, you    │
+│  can integrate past customer interaction data with conversational AI to create a personalized experience for  │
+│  your customers. For instance, it can make recommendations based on past customer purchases or search         │
+│  inputs. [...] Conversational artificial intelligence (AI) is a technology that allows software to process    │
+│  and respond to human voice- or text-based conversations. Traditionally, human chat with software has been    │
+│  limited to preprogrammed inputs where users input or speak predetermined commands. Conversational AI goes    │
+│  much beyond that. It can recognize all types of speech and text input, mimic human interactions, and         │
+│  understand and respond to queries in various languages. Organizations use conversational AI [...]...",       │
+│        "score": 0.8335554,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "b9a106-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.k2view.com/what-is-conversational-ai",                                             │
+│        "title": "What is Conversational AI? | A Practical Guide",                                             │
+│        "content": "A chatbot answers with pre-defined replies based on programmed rules.\n\nConversational    │
+│  AI allows for much more intelligent, natural, and personalized conversations for a better user experience    │
+│  than conventional chatbots.\n\n## What is an example of conversational AI? [...] An AI chatbot for customer  │
+│  service or virtual assistant enhances support by handling FAQs, troubleshooting issues, and assisting with   │
+│  routine inquiries, leaving human agents free to handle more complex tasks. In a conversational AI chatbot    │
+│  vs assistants comparison, both could guide users through account setup, resolve billing issues in real       │
+│  time, or deliver more personalized experiences by studying user preferences. They could also provide         │
+│  tailored recommendations and proactive notifications [...] The primary goal of conversational AI is to       │
+│  enable machines to understand human speech, follow conversational flows, and respond intelligently. Highly   │
+│  attuned to tasks like recognizing intent, managing dialogue flow, and provi...",                             │
+│        "score": 0.7771143,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "793a5a-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.salesforce.com/agentforce/chatbot/what-is-an-ai-chatbot",                          │
+│        "title": "What Is an AI Chatbot? | Salesforce",                                                        │
+│        "content": "These capabilities let the bot engage in more natural and relevant conversations, learn    │
+│  from user input over time, and develop ways of handling issues more accurately and efficiently. They can     │
+│  answer questions, provide product recommendations, and facilitate transactions. AI chatbots can also         │
+│  collect information and quickly suggest solutions. They are even designed to react much like a human would.  │
+│  For instance, in service, AI chatbots can help streamline processes by offering responses 24/7. [...] An AI  │
+│  chatbot is an AI digital assistant that uses AI to understand and respond to inquiries in real time,         │
+│  simulating human conversation with an end user. Unlike traditional chatbots, which rely on preprogrammed     │
+│  rules and responses, AI chatbots use natural language processing (NLP) and machine learning (ML) to          │
+│  understand and respond to user questions on demand.",                                                        │
+│        "score": 0.77589405,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "366ca4-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.81,                                                                                     │
+│    "request_id": "681aaa66-c1be-4e13-a4cc-6ebda389c824"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[32mTool tavily_search executed with result: {
+  "query": "difference between conversational AI chatbots and Agent AI",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://www.cognigy.com/a...[0m
+[32mTool tavily_search executed with result: {
+  "query": "what is Agent AI vs chatbot",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "title": "AI Agent vs. Chatbot: What's the Difference?",
+      "...[0m
+[32mTool tavily_search executed with result: {
+  "query": "conversational AI chatbot definition capabilities",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://www.liveperson.com/resourc...[0m
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#4) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'Agent AI autonomous decision making capabilities examples'}                                 │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#5) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'conversational AI chatbot limitations reactive vs proactive'}                               │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#6) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'AI agent multi-step task execution backend integration'}                                    │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#6) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "AI agent multi-step task execution backend integration",                                         │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url": "https://calljmp.com/blog/backend-for-ai-agents-integration",                                   │
+│        "title": "Backend for AI Agents - Runtime, Tools, Memory",                                             │
+│        "content": "A backend for AI agents is the production layer that sits between your application, your   │
+│  models, and your business systems.\n\nIt gives agents the ability to run multi-step workflows, remember      │
+│  state, call internal APIs, access tools safely, pause for human approval, recover from failures, and expose  │
+│  traces for debugging and compliance. [...] | Traditional backend | Backend for AI agents |\n --- |\n|        │
+│  Handles request/response APIs | Handles multi-step agent workflows |\n| Stores product data | Stores agent   │
+│  state, memory, and intermediate results |\n| Authenticates users | Enforces user, agent, and tool            │
+│  permissions |\n| Calls services directly | Lets agents safely call tools and APIs |\n| Logs API requests |   │
+│  Traces prompts, tool calls, retries, latency, and cost | [...] ## Why AI agents need a separate              │
+│  backend\n\nA simple chatbot can send a prompt to an LLM and return an answer. Production AI agents are       │
+│  different. They need to run multi-step workflows, call tools, remember context, check permission...",        │
+│        "score": 0.8652358,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "498e2d-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url":                                                                                                 │
+│  "https://dev.to/leena_malhotra/i-let-an-ai-agent-handle-a-multi-step-task-heres-where-it-broke-m31",         │
+│        "title": "I Let an AI Agent Handle a Multi-Step Task. Here's Where It ...",                            │
+│        "content": "Tools like Crompt AI help by providing access to multiple models that can cross-check      │
+│  each other's work\u2014using Claude Sonnet 4.5 for analysis and GPT-5 for validation catches errors that     │
+│  single-model workflows miss. The Content Writer and Email Assistant can be used in sequence for multi-step   │
+│  content creation with explicit handoffs between stages. [...] Build in manual checkpoints. After each        │
+│  significant step, review outputs before proceeding. This catches wrong paths early and keeps context         │
+│  manageable. The overhead is worth it to avoid three-hour dead ends.\n\nMake intermediate artifacts           │
+│  explicit. Force each step to produce a file or structured output. This makes workflow state inspectable and  │
+│  allows resuming from any point. It also helps AI agents by making inputs/outputs explicit rather than        │
+│  context-dependent. [...] Four steps. Clear inputs. Well-defined outputs. The kind of task that should be     │
+│  perfect for AI automation.\n\nThree hours later, I had a partially complete report, two abando...",          │
+│        "score": 0.63723457,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "4c0c70-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://redis.io/blog/multi-step-ai-agents",                                                   │
+│        "title": "Multi-Step AI Agents: What They Are & How They Work",                                        │
+│        "content": "This guide covers what a multi-step AI agent is, how the think-act-observe loop works,     │
+│  why these agents break in production, and what they need from the data layer to stay reliable.\n\n## What    │
+│  is a multi-step AI agent?\n\nA multi-step AI agent is a system where an LLM controls what happens next,      │
+│  instead of just generating a single response. At each step, it reasons about what to do, takes an action,    │
+│  observes the result, and reasons again until it reaches its goal. [...] You ask a chatbot to summarize a     │
+│  long email thread, and it hands back a tidy paragraph. Useful, but that's a single-step system\u2014one      │
+│  prompt, one response, done. A multi-step AI agent works differently. Ask it the same question, and it can    │
+│  check your order history, query the shipping API, notice the package is stuck in a warehouse, draft a        │
+│  support ticket, and follow up when the status changes. It breaks a goal into pieces, takes actions, checks   │
+│  the results, and keeps going until the job is done. [...] The defining trait is ch...",                      │
+│        "score": 0.59061456,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "177c78-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://trigger.dev",                                                                          │
+│        "title": "Trigger.dev | Build and deploy fully-managed AI agents and ...",                             │
+│        "content": "Chain AI prompts together to create multi-stage processing flows.\n\nView                  │
+│  example\n\nRouting\n\n### Routing\n\nSmart distribution of tasks to specialized AI models based on content   │
+│  analysis.\n\nView example\n\nParallelization\n\n### Parallelization\n\nConcurrent execution of multiple AI   │
+│  tasks for simultaneous processing and analysis.\n\nView example\n\nOrchestrator\n\n###                       │
+│  Orchestrator\n\nCoordinate multiple AI agents to achieve complex objectives.\n\nView                         │
+│  example\n\nEvaluator-optimizer\n\n### Evaluator-optimizer [...] > Trigger.dev lets us focus on AI logic,     │
+│  not infrastructure. We can now ship workflow orchestration the same way we ship backend features.\n>\n>      │
+│  Read Pallet's customer story\n\nKarl Kaiser\n\nKarl Kaiser\n\nPallet\n\nPallet logo [...] Algora logo\n\n>   │
+│  I really enjoyed using Trigger.dev to create jobs through code. I found the API integrations and scheduling  │
+│  features super useful.\n\nAdam Shiervani\n\nAdam Shiervani\n\nBuildJet logo\n\n### Ready to start            │
+│  building?\n\nBuild and deploy your first task in 3 mins with no timeou...",                                  │
+│        "score": 0.5370662,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "6c24b0-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://credal.ai/blog/the-complete-guide-to-multi-agent-platforms",                           │
+│        "title": "The Complete Guide to Multi-Agent Platforms",                                                │
+│        "content": "4. User and Human Feedback Integration: Monitoring data and human oversight are only as    │
+│  valuable as the improvements you derive from them. The best AI agent platforms incorporate feedback loops    │
+│  so that the system learns and gets better with each interaction. In practice, a feedback loop means taking   │
+│  the outcomes of agent tasks (and any human corrections or user feedback) and feeding that information back   │
+│  into the agents\u2019 knowledge or policy base. For example, after a customer support agent [...]            │
+│  Multi-agent frameworks have emerged as a solution to these pain points by orchestrating \u201cdigital        │
+│  teams\u201d of specialized AI agents that work together on a task. Instead of one monolithic model           │
+│  straining to do everything, tasks are broken into subtasks handled by expert agents. These sub-agents are    │
+│  created and fully configured, which then get strung together and utilized by the \u201corchestrator\u201d    │
+│  agent. [...] 1. Cross-Functional Orchestration: Multi-agent systems should enable AI \u201ccopilots\u201d    │
+│  to collabo...",                                                                                              │
+│        "score": 0.52612424,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "f64c65-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.07,                                                                                     │
+│    "request_id": "704c60a6-aa38-4a6f-874d-1d8e2a6e3e82"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#6) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "conversational AI chatbot limitations reactive vs proactive",                                    │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url":                                                                                                 │
+│  "https://conversationaltechsummit.com/proactive-vs-reactive-conversational-ai-why-enterprises-are-building-  │
+│  systems-that-start-the-conversation",                                                                        │
+│        "title": "Proactive vs Reactive Conversational AI: Why Enterprises Are Building Systems That Start     │
+│  the Conversation - Conversational Tech Summit Europe",                                                       │
+│        "content": "Reactive Conversational AI responds only when customers initiate contact, while proactive  │
+│  AI identifies triggers such as payment failures, service disruptions, or churn risks and starts the          │
+│  conversation automatically.\n\nWhy are enterprises adopting proactive Conversational AI?\n\nEnterprises are  │
+│  adopting proactive Conversational AI to improve customer experience, reduce support costs, increase          │
+│  customer retention, and address issues before they escalate into larger problems. [...] As discussions       │
+│  continue across the Conversational AI & Customer Experience Summit, one trend is becoming increasingly       │
+│  clear:\n\nReactive chatbots are evolving into proactive digital engagement systems that actively             │
+│  participate in customer relationships.\n\nOrganizations that successfully combine business signals,          │
+│  intelligent decision-making, and contextual communication will be better positioned to deliver exceptional   │
+│  customer experiences in the years ahead. [...] While the concept appears straightforward, building p...",    │
+│        "score": 0.8235701,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "21fa10-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://techquarter.io/blog/types-of-ai-agents",                                               │
+│        "title": "Types of AI Agents: Reactive, Proactive, Conversational - techquarter",                      │
+│        "content": "## FAQs\n\nWhat\u2019s the main difference between reactive and proactive AI agents?       │
+│  \nReactive agents only respond to inputs. Proactive agents analyze behavior and data to take                 │
+│  initiative.\n\nAre conversational agents always proactive?  \nNot necessarily. Some are reactive, but        │
+│  advanced ones can be proactive by suggesting next steps or offering help before users ask. [...] Basic       │
+│  customer service chatbots that answer FAQs.\n Thermostats that adjust temperature based on a set range.\n    │
+│  Recommendation engines that show trending products without personalization.\n\nReactive agents are fast,     │
+│  reliable, and inexpensive to implement. But they won\u2019t scale well for more complex or dynamic           │
+│  tasks.\n\n## Proactive AI Agents [...] Which type is best for business?  \nIt depends on your needs. Use     │
+│  reactive agents for repetitive tasks, proactive agents for dynamic automation, and conversational agents     │
+│  for high-volume user interaction.\n\nFinal Thoughts\n\nEach type of AI agent plays a different role.         │
+│  Picking the right one ...",                                                                                  │
+│        "score": 0.76490957,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "235aa6-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://medium.com/@botpretai/proactive-vs-fb122071bdf1",                                      │
+│        "title": "Medium",                                                                                     │
+│        "content": "## Understanding Proactive and Reactive Chatbots\n\nReactive Chatbots act as digital       │
+│  responders. They wait for customers to initiate a conversation, answering queries or guiding users as        │
+│  needed. These chatbots are effective for troubleshooting, FAQs, or handling customer-initiated               │
+│  interactions. While reliable and straightforward, they lack the ability to anticipate user needs or steer    │
+│  conversations toward value-driven outcomes. [...] Proactive chatbots merge advanced analytics, AI, and user  │
+│  data to create meaningful, impactful interactions. Unlike their reactive counterparts, they don\u2019t just  │
+│  wait \u2014 they act, anticipating needs and resolving potential barriers before they arise. Here\u2019s     │
+│  why this proactive approach matters:\n\n## Conclusion [...] Share\n\nChatbots have become a cornerstone of   │
+│  customer interaction, streamlining support and enhancing user experiences. However, not all chatbots are     │
+│  created equal. The two primary types \u2014 proactive and reactive chatbots, offer distinct advantages       │
+│  an...",                                                                                                      │
+│        "score": 0.7447496,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "3f4ed7-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.mindstudio.ai/blog/post-prompting-era-proactive-ai-agents",                        │
+│        "title": "The Post-Prompting Era: How AI Agents Are Shifting From Reactive to Proactive |              │
+│  MindStudio",                                                                                                 │
+│        "content": "Reactive AI doesn\u2019t need to remember much \u2014 each conversation is mostly          │
+│  self-contained. Proactive agents often need to track state across time: what did I process last time? What   │
+│  actions have I already taken? What\u2019s the current status of this workflow? [...] The cost of inference   │
+│  dropped. Running agents continuously used to be prohibitively expensive. As inference costs have come down,  │
+│  more use cases become economically viable.\n\nTogether, these changes crossed a threshold. Proactive AI      │
+│  agents moved from proof-of-concept to something teams can actually deploy and rely on.\n\n## The             │
+│  Architecture Behind Proactive AI\n\nBuilding proactive agents requires thinking about architecture           │
+│  differently than building a chatbot.\n\n### Triggers and conditions [...] What these use cases have in       │
+│  common: they\u2019re repetitive, they involve pulling and acting on information from multiple sources, and   │
+│  they\u2019ve historically required consistent human attention to maintain. Proactive agents handle the       │
+│  consistent atten...",                                                                                        │
+│        "score": 0.7045877,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "d59a3d-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.fullstory.com/blog/the-two-sides-of-ai",                                           │
+│        "title": "Reactive & Proactive AI Explained: Two Sides of AI Agents",                                  │
+│        "content": "Proactive AI, on the other hand, aims to anticipate user behavior based on behavioral      │
+│  data patterns, all without a user explicitly stating their intention or asking for help (through a website   │
+│  chatbot, for example). It transforms what were once just data points\u2014traditionally visualized as        │
+│  dashboard trends\u2014into predictive insights that empower real-time decision-making.  \n  \nExample:",     │
+│        "score": 0.6356076,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "547413-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.77,                                                                                     │
+│    "request_id": "45dbbabb-4810-4488-8f9f-4156f3795ead"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#6) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "Agent AI autonomous decision making capabilities examples",                                      │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url": "https://smythos.com/developers/agent-development/ai-agent-decision-making",                    │
+│        "title": "Understanding AI Agent Decision-Making Processes - SmythOS",                                 │
+│        "content": "First, AI agents have autonomy. This means they can make choices without a human telling   │
+│  them what to do every step of the way. For example, a self-driving car can decide when to turn or stop on    │
+│  its own.\n\nNext, AI agents use perception to understand their surroundings. They might use cameras to see   │
+│  or microphones to hear, just like humans do. This helps them gather information about the world. [...] AI    │
+│  agents are revolutionizing the way businesses operate, offering a wealth of benefits that boost efficiency   │
+│  and transform decision-making processes. These intelligent systems excel at handling repetitive tasks,       │
+│  freeing up human workers to focus on more complex and creative endeavors. For instance, in customer          │
+│  service, AI agents can field common inquiries 24/7, allowing human representatives to tackle nuanced issues  │
+│  that require empathy and problem-solving skills. [...] One of the most striking advantages of AI agents is   │
+│  their ability to process massive datasets at lightning speed. This ca...",                                   │
+│        "score": 0.86713725,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "d39705-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.automationanywhere.com/company/blog/ai-agents-examples",                           │
+│        "title": "AI Agents Examples: Top Use Cases for the Autonomous Enterprise",                            │
+│        "content": "For example, an employee requesting a replacement laptop no longer triggers a manual       │
+│  ticket escalation chain. An AI agent interprets the request, validates policy eligibility, checks            │
+│  inventory, creates a procurement request, updates the asset management system, and schedules delivery        │
+│  automatically. [...] ### Finance: Accounts payable & financial close agents\n\nFinance organizations are     │
+│  deploying AI agents to automate high-volume financial operations while maintaining governance, compliance,   │
+│  and human oversight for material decisions.\n\nTrigger: An invoice arrives via email.\n\nReasoning: The AI   │
+│  agent validates the vendor, matches the invoice against purchase orders, identifies exceptions, checks       │
+│  approval policies, and determines the appropriate resolution path. [...] One of the strongest examples is    │
+│  employee onboarding. An AI agent interprets hiring data, provisions accounts, orders equipment, schedules    │
+│  training, updates payroll systems, and coordinates approvals automatically across multi...",                 │
+│        "score": 0.834852,                                                                                     │
+│        "raw_content": null,                                                                                   │
+│        "id": "ccce95-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://toloka.ai/blog/ai-agents-components-and-their-role-in-autonomous-decision-making",     │
+│        "title": "AI agents components and their role in autonomous decision-making",                          │
+│        "content": "2. Data dependency and biasAI agents are only as good as the data they\u2019re trained     │
+│  on. Biased data leads to biased decisions, and that can scale quickly when these systems operate             │
+│  autonomously. We\u2019re seeing real-world examples where AI unintentionally reinforces stereotypes or       │
+│  creates inequitable outcomes, especially in hiring, lending, and law enforcement. [...] We\u2019re seeing    │
+│  the rise of pre-built agent modules offered via APIs, making sophisticated capabilities (e.g., medical       │
+│  diagnostics, fraud detection) accessible to startups and SMBs without needing full-blown AI teams. This      │
+│  democratization is reducing barriers and accelerating innovation in underserved sectors.\n\n3. Cross-agent   │
+│  collaboration [...] Autonomous fleets are also logging millions of miles without incident, while smart       │
+│  drones handle deliveries and navigate complex airspace on their own. In cities, agents are managing traffic  │
+│  lights and synchronizing transit schedules to ease congestion and reduce emissions \u2014 one European       │
+│  c...",                                                                                                       │
+│        "score": 0.8252664,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "98dc84-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://hdsr.mitpress.mit.edu/pub/fdzqkh85",                                                   │
+│        "title": "AI Agents Are Transforming Decision Making: What Leaders Should Know",                       │
+│        "content": "The SCOM intelligence agent brings together automation, real-time insights, and proactive  │
+│  communication to make supply chain operations faster, smarter, and more resilient, helping deliver critical  │
+│  infrastructure for digital transformation. This case study demonstrates a human-in-the-loop AI agent         │
+│  solution where the agent handles detection, analysis, and communications autonomously, but final decision    │
+│  authority remains with humans. Organizations should calibrate autonomy levels based on [...] The rise of AI  │
+│  agents in supply chain optimization mirrors a broader industry shift. The global AI market is projected to   │
+│  grow rapidly from $294 billion in 2025 to $1.77 trillion by 2032, reflecting how central AI\u2011driven      │
+│  systems have become to strategic decision\u2011making (Fortune Business Insights, 2025).\n\n# Case Study:    │
+│  Supply Chain Operations Management (SCOM) Intelligence Agent [...] How it works:  \nIt pulls together        │
+│  information from internal systems, suppliers, carrier feeds, and real-time tracki...",                       │
+│        "score": 0.73505294,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "72532e-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.youtube.com/watch?v=fXizBc03D7E",                                                  │
+│        "title": "5 Types of AI Agents: Autonomous Functions & Real-World ...",                                │
+│        "content": "of the world and that's stored in the state component and that state component is updated  │
+│  by observing how the world actually evolves. Essentially how the environment changes from one state to       │
+│  another. The agent also tracks how its own actions affect the environment. That's what my actions do. And    │
+│  all of this is used instead of just taking the raw precepts data for decision making. So take a robotic      │
+│  vacuum cleaner for example. The internal state that remembers where it's been and what areas are [...] on    │
+│  top of the model-based agent by adding decision-making that's based on goals. So we don't have any more      │
+│  condition action rules, we have goals, and they represent the desired output the agent is trying to          │
+│  achieve. So the agent uses its internal model, that's how the world evolves and what my actions do, to       │
+│  simulate future outcomes of possible actions, essentially predicting what will it be like if I do action A.  │
+│  Now that's a shift in decision making. The agent isn't just asking what acti...",                            │
+│        "score": 0.70263255,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "d771bd-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.78,                                                                                     │
+│    "request_id": "1c04806d-f3f3-429d-bdf3-05c07eb032e6"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[32mTool tavily_search executed with result: {
+  "query": "Agent AI autonomous decision making capabilities examples",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://smythos.com/develo...[0m
+[32mTool tavily_search executed with result: {
+  "query": "conversational AI chatbot limitations reactive vs proactive",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://conversationalte...[0m
+[32mTool tavily_search executed with result: {
+  "query": "AI agent multi-step task execution backend integration",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://calljmp.com/blog/back...[0m
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#7) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'when to use chatbot vs AI agent business use cases'}                                        │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#8) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': '"AI agent" vs "conversational AI" technical architecture differences 2024 2025'}            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#8) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "when to use chatbot vs AI agent business use cases",                                             │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url": "https://www.youtube.com/watch?v=APRh2aUA7t4",                                                  │
+│        "title": "AI Agent vs. Chatbot: The Critical Difference for Business Support",                         │
+│        "content": "You will learn when a predictable, rule-based chatbot is the right choice for repetitive   │
+│  questions, and when an AI agent is better for complex conversations, connected business systems, and         │
+│  actions such as refunds or billing support.\n\nWe guide you through a practical decision framework based on  │
+│  cost, predictability, adaptability, and the level of automation your business needs. [...] outside that      │
+│  script, the bot cannot handle it and will simply refuse to answer. Escalate the customer to a human agent    │
+│  who can answer the question or worst of all, give a wrong answer. This isn't an inherent flaw of chatbots,   │
+│  by the way. It's a conscious decision. Chatbots are built for predictability. You know exactly what they'll  │
+│  say because, well, you wrote it. For certain use cases, that's exactly what you want. An AI agent is the     │
+│  complete opposite. Instead of following strict predefined [...] than it may seem. The effectiveness of       │
+│  automation is largely determined by the quality of the handoff. When a ...",                                 │
+│        "score": 0.8803145,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "18a9ce-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://rasa.com/blog/ai-agent-vs-chatbot",                                                    │
+│        "title": "AI agents vs. chatbots: Capabilities, limitations, and applications",                        │
+│        "content": "Both chatbots and AI agents can help enterprises reduce costs, improve customer            │
+│  satisfaction, and scale operations. The difference lies in where each fits best as some use cases favor      │
+│  lightweight automation, while others require more advanced, autonomous capabilities.\n\n### When to use      │
+│  chatbots\n\nChatbots work best for simple, low-risk scenarios that involve repetitive tasks and limited      │
+│  backend interaction: [...] Chatbot and AI agent use cases vary by industry, shaped by factors such as        │
+│  compliance requirements, system complexity, and customer journeys. The examples below illustrate how each    │
+│  approach is typically applied:\n\nIndustry\n\nChatbot use cases\n\nAI agent use cases\n\nBanking, financial  │
+│  services, and insurance (BFSI)\n\n Checking account balances\n Capturing initial claims data\n\n Processing  │
+│  loans\n Detecting fraud\n\nHealthcare\n\n Triaging patient callers\n Booking appointments [...] No. Most     │
+│  chatbots rely on rule engines or intent matching. AI agents, by contrast, include planning, decision-m...",  │
+│        "score": 0.8740022,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "30fa9c-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.assembled.com/page/ai-agent-vs-chatbot",                                           │
+│        "title": "AI agent vs. chatbot: Which one is right for your business?",                                │
+│        "content": "The biggest difference: a chatbot follows scripts and requires direction, while an AI      │
+│  agent makes autonomous decisions and takes independent action.\n\nThink of it this way: a chatbot is like a  │
+│  trainee who needs supervision for complex tasks, while an AI agent is like an experienced employee who       │
+│  confidently handles problems end to end.\n\nIn practice, their differences become clear. Here\u2019s a       │
+│  detailed comparison so you can understand their ideal use cases and limitations. [...] An AI chatbot         │
+│  follows scripts and handles routine questions. An AI agent makes decisions, takes action, and resolves       │
+│  complex issues independently. Despite the prevalence of AI in support operations (a reported 88% of          │
+│  knowledge workers used it in 2025), these terms are still used interchangeably \u2014 creating confusion     │
+│  for teams evaluating their options.\n\nUnderstanding what sets them apart and when to use each is            │
+│  essential. This guide breaks down what you need to know.\n\n## What is an AI chatbot? [...] This             │
+│  doesn\u2019t mean o...",                                                                                     │
+│        "score": 0.85421735,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "d4a399-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.salesforce.com/agentforce/ai-agent-vs-chatbot",                                    │
+│        "title": "AI Agent vs. Chatbot \u2014 What's the Difference?",                                         │
+│        "content": "\u201cWhat I foresee is customers using chatbots in some cases where they want to be more  │
+│  prescriptive and have more control, and using agents for other use cases where they\u2019re comfortable      │
+│  letting generative AI control the conversation. The technology is still evolving, so maybe this changes in   │
+│  a few years, but until then, we should think of agents and chatbots as a better together story.\u201d\n\n##  │
+│  AI agents vs chatbots: key differences [...] \u201cFor primarily customer-facing scenarios, I think there    │
+│  will be a mix of traditional chatbots and modern generative AI agents. For employee-facing scenarios, an     │
+│  agent is more favorable,\u201d he said. \u201cOur Agentforce Assistant is integrated in the flow of work     │
+│  alongside other business processes. And that, combined with quick integration, will make for faster          │
+│  adoption.\u201d",                                                                                            │
+│        "score": 0.85186684,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "494ac1-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.neudesic.com/blog/ai-chatbots-vs-ai-agents",                                       │
+│        "title": "AI chatbots vs AI agents: Which AI tool fits your business needs?",                          │
+│        "content": "Choosing between an AI chatbot and an AI agent depends on your business needs. If          │
+│  you\u2019re looking for a cost-effective solution for handling repetitive tasks, AI chatbots would be a      │
+│  cost-effective solution. But if you need a versatile, intelligent assistant to manage complex workflows,     │
+│  deliver personalized interactions, or uncover actionable insights, AI agents are the way forward. [...]      │
+│  When comparing AI chatbots and AI agents, the differences go far beyond functionality\u2014they reflect two  │
+│  distinct approaches to leveraging artificial intelligence. Chatbots are designed for straightforward,        │
+│  routine tasks, while AI agents bring advanced capabilities to solve complex problems and adapt to evolving   │
+│  needs. From their underlying technology to their learning capabilities and real-world applications,          │
+│  understanding these differences is crucial for selecting the right solution for your",                       │
+│        "score": 0.8286204,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "33c071-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.0,                                                                                      │
+│    "request_id": "eaffe0d9-bed5-4701-b20b-720e24bb9279"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#8) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "AI agent vs conversational AI technical architecture differences 2024 2025",                     │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url": "https://www.freshworks.com/freshdesk/ai-agent/vs-conversational-ai",                           │
+│        "title": "Agentic AI vs Conversational AI: Key Differences Explained",                                 │
+│        "content": "In essence, conversational AI is a type of AI agent that focuses on understanding and      │
+│  responding to queries, while agentic AI takes the next step by autonomously executing tasks and driving      │
+│  outcomes. The distinction between agentic AI vs AI agents lies in the level of autonomy: while               │
+│  conversational AI interacts, agentic AI takes action to achieve results. [...] For businesses, this          │
+│  difference is more than technical. It shapes how customer queries are resolved, how workflows are            │
+│  automated, and how quickly outcomes are delivered. Conversational AI streamlines communication, while        │
+│  agentic AI drives execution, and together, they create a powerful model for efficiency and growth. [...]     │
+│  Conversational AI is relatively easier to scale. Once trained and integrated with a knowledge base, it can   │
+│  handle thousands of customer interactions simultaneously. This makes it ideal for organizations that need    │
+│  to reduce response times and support costs without heavily reengineering their existing systems.",           │
+│        "score": 0.74004334,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "855732-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://natesnewsletter.substack.com/p/the-definitive-guide-to-ai-agents",                     │
+│        "title": "The Definitive Guide to AI Agents in 2025: Technical Implementation, Strategic Decisions,    │
+│  and Market Reality",                                                                                         │
+│        "content": "AI Agent Architecture Deep Dive: Complete technical breakdown of single vs. multi-agent    │
+│  systems, including performance benchmarks, cost implications (3-10x difference), and decision frameworks     │
+│  for choosing the right approach for your use case.\n\nMemory Management & State Architecture: Advanced       │
+│  strategies for working memory, episodic memory, and long-term memory systems, plus security considerations   │
+│  for memory poisoning attacks and data protection in production AI agent deployments. [...] Buy vs. Build     │
+│  Strategic Framework: Comprehensive total cost of ownership analysis comparing ready-made AI agent solutions  │
+│  (Zendesk, Salesforce Agentforce, ServiceNow) versus custom development, with real implementation timelines   │
+│  and resource requirements.\n\nProduction AI Agent Security: Enterprise-grade security architecture covering  │
+│  prompt injection defense, data exfiltration prevention, compliance requirements (HIPAA, GDPR), and           │
+│  AI-specific threat models beyond traditional cybersecurity. [...] AI Agent...",                              │
+│        "score": 0.72884524,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "51d924-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://quickchat.ai/post/ai-agent-vs-chatbot",                                                │
+│        "title": "AI Agent vs Chatbot (2026): Key Differences and Which ...",                                  │
+│        "content": "The term \u201cagent\u201d in this context comes from the AI research tradition where an   │
+│  agent is any system that perceives its environment and takes actions to achieve goals. In the 2024-2026      │
+│  wave of LLM applications, \u201cAI agent\u201d specifically refers to systems that use an LLM as the         │
+│  reasoning engine within a loop that includes observation, planning, tool execution, and evaluation.\n\n###   │
+│  How AI agents work [...] AI agents are the clear fit for most new conversational AI projects in 2026. A few  │
+│  scenarios where the gap between agents and rule-based chatbots is largest:\n\nComplex support requests that  │
+│  span multiple systems. The order-exchange example above is typical. The user has a compound problem that     │
+│  requires looking up data, making decisions, and taking multiple actions. A chatbot would need a dedicated    │
+│  flow for every possible combination of issues. [...] If you\u2019re evaluating conversational AI for         │
+│  support, sales, or internal tooling, you\u2019ve probably noticed that vendors use \u201cchatbot\u201d and   │
+│  \u201cAI agen...",                                                                                           │
+│        "score": 0.6533265,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "1c9f27-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://arxiv.org/html/2503.12687v1",                                                          │
+│        "title": "AI Agents: Evolution, Architecture, and Real-World ...",                                     │
+│        "content": "The integration of large language models (LLMs) with agent architectures represents        │
+│  perhaps the most significant recent\nadvancement in the field. As noted by IBM (2024), At the core of AI     │
+│  agents are large language models\n(LLMs), which provide sophisticated natural language understanding and     │
+│  generation capabilities. However,\nthe true innovation lies in how these models have been augmented with     │
+│  agentic capabilities. Microsoft (2024) describes [...] utility, uncertainty, resource constraints, and       │
+│  safety requirements. Modern agent architecture often implements\nhierarchical action structures, with        │
+│  high-level actions decomposed into sequences of more primitive operations. As\nMicrosoft (2024) explains,    │
+│  agents need access to the computer programs they need to take action on your\nbehalf, like Teams and         │
+│  PowerPoint. This integration with external tools and systems significantly [...] Simple reflex agents        │
+│  represent the most basic agent architecture, operating strictly based on predefined rules and...",           │
+│        "score": 0.6052631,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "51adc2-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.ibm.com/think/topics/ai-agents",                                                   │
+│        "title": "What Are AI Agents? | IBM",                                                                  │
+│        "content": "## Thank you!\n\nYou are subscribed.\n\n## Agentic versus nonagentic AI chatbots\n\nAI     │
+│  chatbots use conversational AI techniques such as natural language processing (NLP) to understand user       │
+│  questions and automate responses to them. These chatbots are a modality whereas agency is a technological    │
+│  framework. [...] AI agents solve complex tasks across enterprise applications, including software design,    │
+│  IT automation, code generation and conversational assistance. They use the advanced natural language         │
+│  processing techniques of large language models (LLMs) to comprehend and respond to user inputs step-by-step  │
+│  and determine when to call on external tools.",                                                              │
+│        "score": 0.50564,                                                                                      │
+│        "raw_content": null,                                                                                   │
+│        "id": "59d0bb-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.08,                                                                                     │
+│    "request_id": "6cb36f09-1e6f-4006-81bb-c91d670208fc"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[32mTool tavily_search executed with result: {
+  "query": "AI agent vs conversational AI technical architecture differences 2024 2025",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://w...[0m
+[32mTool tavily_search executed with result: {
+  "query": "when to use chatbot vs AI agent business use cases",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://www.youtube.com/watch?v=A...[0m
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#9) ────────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'AI agent implementation cost complexity vs chatbot 2024 2025'}                              │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────── 🔧 Tool Execution Started (#10) ───────────────────────────────────────╮
+│                                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Args: {'query': 'AI agent chatbot hybrid approach debate limitations'}                                       │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#10) ──────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "AI agent chatbot hybrid approach debate limitations",                                            │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url": "https://rasa.com/blog/ai-agent-vs-chatbot",                                                    │
+│        "title": "AI agents vs. chatbots: Capabilities, limitations, and applications",                        │
+│        "content": "Common limitations include:\n\n Architecture and integration effort: Deployments often     │
+│  require deeper system integration and more upfront technical work.\n Pricing and ROI risk: AI agents often   │
+│  require higher upfront investment than chatbots, and poorly scoped implementations may struggle to deliver   │
+│  ROI.\n Governance requirements: Without clear controls, actions can become difficult to monitor or           │
+│  audit.\n\n## Enterprise applications for chatbots and AI agents [...] Limitations of chatbots and AI         │
+│  agents\n\nAI agents offer broader capabilities than chatbots, but that doesn't make them the right choice    │
+│  for every use case. Both come with tradeoffs, and the better option depends on factors such as budget,       │
+│  complexity, and operational goals.\n\n### Chatbot limitations\n\nChatbots are effective for simple,          │
+│  well-defined tasks, such as sharing store hours. However, their limitations become clear as complexity       │
+│  increases: [...] Task complexity: Simple, well-defined tasks are often suited to chatbots, while mu...",     │
+│        "score": 0.80070794,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "b1d8a3-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://tovie.ai/blog/ai-agent-vs-chatbot-vs-hybrid-the-ultimate-business-guide",              │
+│        "title": "AI Agent vs Chatbot vs Hybrid: The Ultimate Business Guide",                                 │
+│        "content": "However, scripted bots carry significant limitations that become increasingly expensive    │
+│  at scale. Every new use case demands manual development. Market changes require extensive script rewrites.   │
+│  And customer expectations for natural, conversational interactions clash with the inherently robotic feel    │
+│  of rule-based systems. [...] Consider both implementation and ongoing costs, they tell very different        │
+│  stories. Scripted bots require upfront development investment but minimal operating expense. AI agents       │
+│  demand sophisticated infrastructure and compute costs that scale with every interaction. [...] The           │
+│  conversational AI market has matured at breakneck speed. Scripted bots, fully autonomous AI agents, and      │
+│  hybrid architectures are multiplying faster than most teams can evaluate them. And the stakes are real.      │
+│  Choose the wrong approach, and you\u2019re looking at wasted budgets, frustrated customers, and a painful    │
+│  rip-and-replace eighteen months down the line.",                                                             │
+│        "score": 0.74318707,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "f130ce-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.salesforce.com/agentforce/ai-agent-vs-chatbot",                                    │
+│        "title": "AI Agent vs. Chatbot \u2014 What's the Difference?",                                         │
+│        "content": "| Limitations | Because they connect deeply with internal databases, these tools require   │
+│  thorough initial planning. Companies must maintain clean data environments so the systems can pull accurate  │
+│  information. | When customers ask questions outside of a rigid script, these tools hit a wall. They cannot   │
+│  execute independent actions or pull real-time data from external systems. | [...] As we all collectively     │
+│  navigate this rapidly evolving AI landscape, understanding the ways that both chatbots and agents can        │
+│  uniquely benefit your business \u2014 both now and in the future \u2014 will be important for maximizing     │
+│  their impact. Whether employing a chatbot, an agent, or taking a hybrid approach and using both in tandem,   │
+│  these tools will undoubtedly play increasingly meaningful roles in business operations, reshaping how we     │
+│  interact with technology and each other. [...] Their ability to provide quick, consistent responses to       │
+│  common questions makes them a reliable, cost-effective solution for handling ro...",                         │
+│        "score": 0.61363083,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "ceae4a-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://decagon.ai/blog/ai-chatbots-customer-service",                                         │
+│        "title": "Selecting AI chatbots for reliable customer service - Decagon",                              │
+│        "content": "Many inquiries fall somewhere in the middle \u2013 they might be complex but carry low     │
+│  risk, or be simple but carry high risk. For these situations, a hybrid approach where the AI and a human     │
+│  agent work together is most effective. [...] The debate about whether companies should adopt AI for          │
+│  customer service is over. The real question is how to do it correctly and how quickly you can get started.   │
+│  AI agents are rapidly becoming essential business infrastructure, as fundamental as a CRM or payment         │
+│  processor. [...] These are the traditional chatbots that many people are familiar with. They can be          │
+│  programmed to answer common questions and explain company policies from a knowledge base. However, their     │
+│  primary limitation is that they can talk about a policy but cannot execute an action. For example, a         │
+│  conversational bot can tell a customer about your 30-day return policy, but it cannot actually process the   │
+│  return because it isn\u2019t integrated into your backend order management system.",                         │
+│        "score": 0.5393963,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "ce5c83-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url":                                                                                                 │
+│  "https://www.linkedin.com/posts/nickciubotariu_ai-llm-hybrid-activity-7369515905833189378-FBt6",             │
+│        "title": "Why Enterprises Should Choose a Hybrid LLM Strategy | Nick Ciubotariu posted on the topic |  │
+│  LinkedIn",                                                                                                   │
+│        "content": "logic and tools to perform tasks. 2\ufe0f\u20e3 Limitations of LLMs LLMs cannot perform    │
+│  actions on their own. Examples: sending emails, buying stocks, posting to Google Docs\u2014all require       │
+│  external execution. 3\ufe0f\u20e3 The Role of Tools A tool is a piece of code written to perform a specific  │
+│  task. Tools allow LLMs to act beyond text, enabling agentic behavior in applications. 4\ufe0f\u20e3 Agentic  │
+│  Application Workflow User Request: A user sends a request to the application. LLM + Tools: The application   │
+│  provides the LLM [...] of LLM engineering is not about integrating your application or service with a        │
+│  third-party-API-all-in-one-chatbot (aka GPT-5 and friends), but building (aka fine-tuning) and locally       │
+│  deploying a small task and device specific LLM for your business case. Because accurate chat completions     │
+│  are cool, but having them > Faster (less than 300ms) > Cheaper > Without sharing your company (and           │
+│  customer) data is KEY if you want to stay ahead of the competition.                                          │
+│  \ud835\udddb\ud835\uddee\ud835\uddfb\ud835\uddf1\ud835\ude00-\ud835\uddfc\ud835\uddfb                        │
+│  \ud835\uddf2\ud835\ude05\ud835\uddee\ud835\uddfa\ud835\uddfd\ud835\uddf9\ud835\uddf2                         │
+│  \ud83d\udc68\ud83c\udffb\ud83d\udcbb My latest open-source [...",                                            │
+│        "score": 0.25953507,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "2dc321-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.0,                                                                                      │
+│    "request_id": "26bcf519-41a7-43b0-ae76-052b0c244dbd"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────── ✅ Tool Execution Completed (#10) ──────────────────────────────────────╮
+│                                                                                                               │
+│  Tool Completed                                                                                               │
+│  Tool: tavily_search                                                                                          │
+│  Output: {                                                                                                    │
+│    "query": "AI agent implementation cost complexity vs chatbot 2024 2025",                                   │
+│    "follow_up_questions": null,                                                                               │
+│    "answer": null,                                                                                            │
+│    "images": [],                                                                                              │
+│    "results": [                                                                                               │
+│      {                                                                                                        │
+│        "url": "https://technovapartners.com/en/insights/complete-guide-ai-agents-business-2025",              │
+│        "title": "10 Best AI Agents for Business in 2025: Tested & Compared",                                  │
+│        "content": "1. Phase 1 (Months 1-6): Implement LLM-powered chatbot to validate adoption                │
+│  (\u00a315k-\u00a325k)\n2. Phase 2 (Months 7-12): If positive ROI, upgrade to AI Agent for more complex use   │
+│  cases (\u00a330k-\u00a350k additional)\n3. Phase 3 (Year 2): Scale successful AI Agents to multiple          │
+│  departments and processes\n\n## ROI of AI Agents: Real Metrics and Success Stories                           │
+│  {#roi-of-ai-agents}\n\n### Demonstrated Quantifiable Benefits\n\nProductivity: [...] ### Decision            │
+│  Framework: Which to Implement?\n\nUse CHATBOT if:\n\n Interactions are simple and predictable (FAQ, status   │
+│  queries)\n Volume is high but complexity low\n Limited budget (<\u00a315,000)\n Quick implementation needed  │
+│  (2-4 weeks)\n Deep back-end system integration not required\n\nUse RPA if: [...] ## Frequently Asked         │
+│  Questions (FAQ) {#frequently-asked-questions}\n\n1. How much does it cost to implement AI Agents in my       │
+│  SME?\n\n\u00a320k-\u00a370k depending on complexity. Simple projects (single use case) \u00a320-\u00a335k.   │
+│  Multi-use case \u00a335-\u00a360k. Complex integrations \u00a360-\u00a390k. With innovation grant...",       │
+│        "score": 0.8232293,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "a46b31-00"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.envive.ai/post/ai-chatbot-vs-agent-statistics",                                    │
+│        "title": "32 AI Chatbot vs Agent Statistics for eCommerce",                                            │
+│        "content": "The foundation of modern retail is shifting toward AI-driven experiences. The global       │
+│  AI-enabled eCommerce market has reached $8.65 billion in 2025, signaling that brands without AI              │
+│  capabilities are falling behind competitors who have already implemented intelligent shopping experiences.   │
+│  This market underpins everything from basic chatbots to sophisticated AI agents that handle search, sales,   │
+│  support, and content generation. [...] Scalability separates agents from chatbots during peak demand. AI     │
+│  agents handled a 142% surge in actions such as initiating returns and updating shipping details during the   │
+│  2025 holiday season. This ability to handle complex transactions\u2014not just answer                        │
+│  questions\u2014defines the agentic commerce approach.\n\n### 29. 64% of AI-powered sales come from           │
+│  first-time shoppers [...] The most sophisticated category\u2014agentic AI\u2014is currently valued at        │
+│  $688.73 million in 2025 but is projected to reach $25.3 billion by 2035 at a 43.4% CAGR. This segment        │
+│  represents AI systems that...",                                                                              │
+│        "score": 0.7487387,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "26fb5d-01"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent",                   │
+│        "title": "AI Agent Development Cost $5K to $180K+ (2026)",                                             │
+│        "content": "Building an AI agent typically costs between $5,000 and $500,000+ depending on             │
+│  complexity. Low-code solutions using platforms like Zapier or Make start around $5,000-$15,000.              │
+│  Custom-built agents with integrations range from $15,000-$75,000. Enterprise multi-agent systems with        │
+│  advanced reasoning, memory, and tool use can exceed $150,000-$500,000.\n\nHow much does it cost to           │
+│  implement AI agents for business? [...] | Market | 2024 | 2025 | 2026 |\n ---  --- |\n| AI Services | $259B  │
+│  | $283B | $325B |\n| AI Application Software | $84B | $172B | $270B |\n| AI Infrastructure Software | $57B   │
+│  | $126B | $230B |\n| GenAI Models | $6B | $14B | $26B |\n| AI-optimized Servers | $14B | $18B | $330B |\n|   │
+│  AI Processing IaaS | $139B | $209B | $268B |\n| AI PCs by ARM and x86 | $51B | $90B | $144B |\n| GenAI       │
+│  Smartphones | $245B | $298B | $393B |\n| Total AI Spending: | $988B | $1.48T | $2.02T |\n\nSource: Gartner   │
+│  (September 2025) [...] Building a custom AI agent sounds like the next logical step until you start          │
+│  asking...",                                                                                                  │
+│        "score": 0.71185225,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "1ff2f2-02"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://datagrid.com/blog/ai-agent-statistics",                                                │
+│        "title": "26 AI Agent Statistics (Adoption Trends and Business Impact)",                               │
+│        "content": "4. Legal: Updated figures indicate active integration of generative AI rose from 14% in    │
+│  2024 to 26% in 2025, nearly doubling in one year. 45% of law firms either use it or plan to make it central  │
+│  to their workflow within one year. The legal sector shows the fastest relative growth rate, though from a    │
+│  lower baseline than other industries. [...] This comprehensive listicle compiles the latest AI agent         │
+│  statistics for 2024-2025, covering market growth projections, enterprise adoption rates across industries,   │
+│  productivity impact measurements, and technological advancement trends. These statistics reveal how AI       │
+│  agents are evolving from experimental technology to essential business infrastructure, with organizations    │
+│  rapidly scaling autonomous systems that handle complex workflows and decision-making processes. [...] 2.     │
+│  The Critical Value Gap: According to PwC's 2025 CEO Survey, 44% of business leaders report workforce         │
+│  efficiency gains from AI implementation, but only 24% see measurable profit...",                             │
+│        "score": 0.5050542,                                                                                    │
+│        "raw_content": null,                                                                                   │
+│        "id": "828c19-03"                                                                                      │
+│      },                                                                                                       │
+│      {                                                                                                        │
+│        "url": "https://www.ibm.com/think/insights/ai-agents-2025-expectations-vs-reality",                    │
+│        "title": "AI Agents in 2025: Expectations vs. Reality",                                                │
+│        "content": "We\u2019re going beyond asking a chatbot to suggest a dinner recipe based on the           │
+│  available ingredients in the fridge. Agents are more than automated customer experience emails that inform   │
+│  you it\u2019ll be a few days until a real-world human can get to your inquiry.\n\nAI agents differ from      │
+│  traditional AI assistants that need a prompt each time they generate a response. In theory, a user gives an  │
+│  agent a high-level task, and the agent figures out how to complete it. [...] For more information on         │
+│  successful AI implementation in the enterprise, read Maryam Ashoori\u2019s guide to agentic AI cost          │
+│  analysis. Also be sure to catch Vyoma Gajjar and Chris Hay expounding on their predictions for AI in 2025    │
+│  on IBM\u2019s Mixture of Experts podcast.\n\n##### Footnotes\n\n1 5 Predictions for AI in 2025, Tharin       │
+│  Pillay and Harry Booth, Time, 16 January 2025.\n\n2 Autonomous agents and profitability to dominate AI       │
+│  agenda in 2025, executives forecast, Katie Paul, Reuters, 13 December 2024. [...] ## Resources\n\nCost of a  │
+│  Data Brea...",                                                                                               │
+│        "score": 0.47767657,                                                                                   │
+│        "raw_content": null,                                                                                   │
+│        "id": "0a4ad3-04"                                                                                      │
+│      }                                                                                                        │
+│    ],                                                                                                         │
+│    "response_time": 1.84,                                                                                     │
+│    "request_id": "f5dc83cf-00e9-49f7-bfde-4e6b193f7060"                                                       │
+│  }                                                                                                            │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[32mTool tavily_search executed with result: {
+  "query": "AI agent implementation cost complexity vs chatbot 2024 2025",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://technovapartner...[0m
+[32mTool tavily_search executed with result: {
+  "query": "AI agent chatbot hybrid approach debate limitations",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://rasa.com/blog/ai-agent-v...[0m
+[35m[Finalize] todos_count=0, todos_with_results=0[0m
+╭──────────────────────────────────────────── ✅ Agent Final Answer ────────────────────────────────────────────╮
+│                                                                                                               │
+│  Agent: Research Analyst                                                                                      │
+│                                                                                                               │
+│  Final Answer:                                                                                                │
+│  Now I have comprehensive information from multiple sources. Let me organize this into a structured set of    │
+│  findings with clear sub-questions and factual bullet points.                                                 │
+│                                                                                                               │
+│  ## Research Findings: The Difference Between Conversational AI Chatbots and Agent AI                         │
+│                                                                                                               │
+│  Based on my research across current industry sources (2024-2025), I've identified the following key          │
+│  sub-questions and findings:                                                                                  │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ### 1. What are the fundamental architectural differences between conversational AI chatbots and Agent AI?   │
+│                                                                                                               │
+│  - **Read-only vs. read-write architecture**: Conversational AI chatbots are fundamentally "read-only"        │
+│  systems that surface answers and draft responses but hand everything to humans to act on, while Agent AI     │
+│  systems are "read-write" capable—they can process refunds, update CRMs, close tickets, and modify backend    │
+│  systems without human intervention at each step (DevRev, 2024).                                              │
+│                                                                                                               │
+│  - **Reasoning and planning capabilities**: AI agents use a "think-act-observe loop" where an LLM controls    │
+│  what happens next at each step—reasoning about the task, taking action, observing results, and reasoning     │
+│  again until the goal is achieved. Chatbots, by contrast, follow predefined scripts or generate single        │
+│  responses without multi-step planning (Redis.io, 2024).                                                      │
+│                                                                                                               │
+│  - **Memory architecture requirements**: Chatbots typically store conversation state as simple filled slots   │
+│  (e.g., `order_id=12345`, `intent=order_status`), while AI agents require richer, multi-layered memory        │
+│  models including working memory, episodic memory, and long-term memory to handle open-ended conversations    │
+│  where relevant information can appear at any point (Quickchat.ai, 2026).                                     │
+│                                                                                                               │
+│  - **Backend integration depth**: AI agents require production-layer backends that handle multi-step          │
+│  workflows, store agent state and intermediate results, enforce tool permissions, enable human-in-the-loop    │
+│  approvals, and trace prompts, tool calls, and retries. Traditional chatbot backends primarily handle         │
+│  request/response APIs and store product data (Calljmp.com, 2024).                                            │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ### 2. How do their operational capabilities and autonomy differ in practice?                                │
+│                                                                                                               │
+│  - **Reactive vs. proactive behavior**: Conversational AI chatbots are "entirely reactive" with little to no  │
+│  ability to carry out tasks independently—they respond only when users initiate contact. AI agents are        │
+│  proactive, can break down complex customer needs, plan actions autonomously, and execute them without        │
+│  waiting for prompts at each step (Cognigy, 2024).                                                            │
+│                                                                                                               │
+│  - **Task execution scope**: Chatbots can tell a customer about a return policy but cannot process the        │
+│  return itself. AI agents can process the return, recommend a replacement based on purchase history, flag     │
+│  the product issue for quality teams, and update multiple backend systems—all within a single interaction     │
+│  (Chatbot.com, 2024).                                                                                         │
+│                                                                                                               │
+│  - **Decision-making authority**: AI agents are "autonomous systems capable of reasoning, planning, and       │
+│  taking actions to achieve goals," while chatbots are "primarily designed for predefined conversational       │
+│  interaction, typically following scripts or generating text responses to routine questions" (Salesforce,     │
+│  2024).                                                                                                       │
+│                                                                                                               │
+│  - **Multi-system coordination**: During the 2025 holiday season, AI agents handled a 142% surge in complex   │
+│  actions such as initiating returns and updating shipping details across multiple systems. This ability to    │
+│  handle complex transactions—not just answer questions—defines the agentic approach (Envive.ai, 2025).        │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ### 3. When should businesses choose chatbots versus AI agents?                                              │
+│                                                                                                               │
+│  - **Chatbot-appropriate use cases**: Chatbots work best for simple, low-risk scenarios involving repetitive  │
+│  tasks with limited backend interaction—such as FAQs, checking account balances, booking appointments,        │
+│  sharing store hours, or handling high-volume but low-complexity interactions where predictability is valued  │
+│  (Rasa, 2024; Assembled, 2025).                                                                               │
+│                                                                                                               │
+│  - **AI agent-appropriate use cases**: AI agents are better suited for complex support requests spanning      │
+│  multiple systems, processing loans, fraud detection, managing supply chain operations, handling order        │
+│  exchanges that require looking up data across systems, making decisions, and taking multiple coordinated     │
+│  actions (Rasa, 2024; BoldDesk, 2024).                                                                        │
+│                                                                                                               │
+│  - **Implementation timeline and cost differences**: Simple chatbot projects can be implemented in 2-4 weeks  │
+│  with budgets under £15,000, while AI agent implementations typically cost £20,000-£70,000+ depending on      │
+│  complexity, with simple single-use-case projects at £20-£35k and complex multi-system integrations reaching  │
+│  £60-£90k (Technova Partners, 2025).                                                                          │
+│                                                                                                               │
+│  - **Phased adoption strategy**: Industry sources recommend a phased approach: implement an LLM-powered       │
+│  chatbot first to validate adoption (£15k-£25k, months 1-6), then upgrade to AI agents for complex use cases  │
+│  if ROI is positive (£30k-£50k additional, months 7-12), and finally scale successful agents across           │
+│  departments in year 2 (Technova Partners, 2025).                                                             │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ### 4. What are the key limitations and risks of each approach?                                              │
+│                                                                                                               │
+│  - **Chatbot limitations**: Chatbots hit a wall when customers ask questions outside rigid scripts, cannot    │
+│  execute independent actions or pull real-time data from external systems, require extensive training on      │
+│  hundreds of utterances to understand natural language requests, and need dedicated flows for every possible  │
+│  combination of issues (Salesforce, 2024; Quickchat.ai, 2026).                                                │
+│                                                                                                               │
+│  - **AI agent limitations**: AI agents require deeper system integration and more upfront technical work,     │
+│  demand higher upfront investment with ROI risk if poorly scoped, need sophisticated infrastructure with      │
+│  compute costs that scale with every interaction, and require clear governance controls to monitor and audit  │
+│  autonomous actions (Rasa, 2024; Tovie.ai, 2024).                                                             │
+│                                                                                                               │
+│  - **Data quality dependencies**: Because AI agents connect deeply with internal databases and execute        │
+│  actions across systems, they require thorough initial planning and clean data environments to pull accurate  │
+│  information. Biased training data leads to biased autonomous decisions that can scale quickly (Salesforce,   │
+│  2024; Toloka.ai, 2024).                                                                                      │
+│                                                                                                               │
+│  - **Scalability trade-offs**: Conversational AI is relatively easier to scale—once trained and integrated    │
+│  with a knowledge base, it can handle thousands of simultaneous interactions. AI agents require more complex  │
+│  state management, memory persistence, and system coordination, making horizontal scaling more                │
+│  architecturally demanding (Freshworks, 2024).                                                                │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ### 5. Is there genuine debate or uncertainty about the future relationship between these technologies?      │
+│                                                                                                               │
+│  - **Hybrid approach advocacy**: Industry experts suggest that chatbots and AI agents represent a "better     │
+│  together story" rather than a replacement scenario. Salesforce's VP of Product suggests customers will use   │
+│  chatbots where they want prescriptive control and agents where they're comfortable with generative AI        │
+│  controlling the conversation, noting "the technology is still evolving, so maybe this changes in a few       │
+│  years" (Salesforce, 2024).                                                                                   │
+│                                                                                                               │
+│  - **Context-dependent deployment**: There's emerging consensus that customer-facing scenarios will see a     │
+│  mix of traditional chatbots and modern AI agents, while employee-facing scenarios favor agents due to their  │
+│  integration in workflow alongside business processes and faster adoption potential (Salesforce, 2024).       │
+│                                                                                                               │
+│  - **Terminology confusion**: Multiple sources note that vendors use "chatbot" and "AI agent"                 │
+│  interchangeably, creating confusion for teams evaluating options. The distinction is architectural rather    │
+│  than just marketing—a chatbot follows predefined scripts while an agent reasons about tasks at runtime—but   │
+│  this fundamental difference isn't always clear in vendor communications (Quickchat.ai, 2026; Assembled,      │
+│  2025).                                                                                                       │
+│                                                                                                               │
+│  - **Evolution trajectory uncertainty**: While sources agree AI agents represent more advanced capabilities,  │
+│  there's genuine uncertainty about adoption timelines and whether simpler chatbot approaches will remain      │
+│  viable long-term. The agentic AI market is projected to grow from $688.73 million in 2025 to $25.3 billion   │
+│  by 2035 (43.4% CAGR), but this doesn't clarify whether chatbots will be displaced or continue serving        │
+│  specific niches (Envive.ai, 2025).                                                                           │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  **Note on sources**: This research draws from industry publications, vendor documentation, and technical     │
+│  analyses published between 2024-2026. The field is rapidly evolving, and specific cost figures, capability   │
+│  claims, and market projections should be verified for your specific context and timeframe.                   │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────── 📋 Task Completion ──────────────────────────────────────────────╮
+│                                                                                                               │
+│  Task Completed                                                                                               │
+│  Name: Research the topic: The difference between conversational AI chatbots and Agent AI                     │
+│                                                                                                               │
+│  Break it into 3-5 key sub-questions, and answer each one with specific, factual points. Note any areas of    │
+│  genuine uncertainty or debate rather than presenting them as settled.                                        │
+│  Agent: Research Analyst                                                                                      │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────── 📋 Task Started ───────────────────────────────────────────────╮
+│                                                                                                               │
+│  Task Started                                                                                                 │
+│  Name: Using the research findings, write a short report on The difference between conversational AI          │
+│  chatbots and Agent AI.                                                                                       │
+│                                                                                                               │
+│  Structure:                                                                                                   │
+│  1. A 2-3 sentence executive summary                                                                          │
+│  2. One section per sub-question, with clear headings                                                         │
+│  3. A short 'Open questions' section if the research flagged any uncertainty                                  │
+│                                                                                                               │
+│  Keep it skimmable — use headings and bullets, not dense paragraphs.                                          │
+│  ID: 804a74dd-06da-44af-97ce-454e15f8b414                                                                     │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────────────── 🤖 Agent Started ───────────────────────────────────────────────╮
+│                                                                                                               │
+│  Agent: Report Writer                                                                                         │
+│                                                                                                               │
+│  Task: Using the research findings, write a short report on The difference between conversational AI          │
+│  chatbots and Agent AI.                                                                                       │
+│                                                                                                               │
+│  Structure:                                                                                                   │
+│  1. A 2-3 sentence executive summary                                                                          │
+│  2. One section per sub-question, with clear headings                                                         │
+│  3. A short 'Open questions' section if the research flagged any uncertainty                                  │
+│                                                                                                               │
+│  Keep it skimmable — use headings and bullets, not dense paragraphs.                                          │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[35m[Finalize] todos_count=0, todos_with_results=0[0m
+╭──────────────────────────────────────────── ✅ Agent Final Answer ────────────────────────────────────────────╮
+│                                                                                                               │
+│  Agent: Report Writer                                                                                         │
+│                                                                                                               │
+│  Final Answer:                                                                                                │
+│  # The Difference Between Conversational AI Chatbots and Agent AI                                             │
+│                                                                                                               │
+│  ## Executive Summary                                                                                         │
+│                                                                                                               │
+│  Conversational AI chatbots are read-only systems that answer questions and draft responses but require       │
+│  humans to take action, while Agent AI systems are read-write platforms that autonomously execute tasks       │
+│  across multiple backend systems. The core distinction is architectural: chatbots follow predefined scripts   │
+│  and respond reactively, whereas AI agents use reasoning loops to plan, execute, and coordinate multi-step    │
+│  workflows without human intervention at each stage. Businesses should choose chatbots for simple,            │
+│  high-volume FAQ scenarios and AI agents for complex, multi-system tasks—though many organizations are        │
+│  adopting a phased hybrid approach.                                                                           │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## Fundamental Architectural Differences                                                                     │
+│                                                                                                               │
+│  **Read-only vs. read-write capabilities**                                                                    │
+│  - Chatbots surface answers and draft responses but hand execution to humans                                  │
+│  - AI agents can process refunds, update CRMs, close tickets, and modify backend systems autonomously         │
+│                                                                                                               │
+│  **Reasoning and planning**                                                                                   │
+│  - Chatbots follow predefined scripts or generate single responses without multi-step planning                │
+│  - AI agents use a "think-act-observe loop" where an LLM reasons about tasks, takes action, observes          │
+│  results, and iterates until goals are achieved                                                               │
+│                                                                                                               │
+│  **Memory architecture**                                                                                      │
+│  - Chatbots store simple conversation state (e.g., `order_id=12345`, `intent=order_status`)                   │
+│  - AI agents require multi-layered memory models including working memory, episodic memory, and long-term     │
+│  memory for open-ended conversations                                                                          │
+│                                                                                                               │
+│  **Backend integration depth**                                                                                │
+│  - Chatbot backends primarily handle request/response APIs and store product data                             │
+│  - AI agent backends manage multi-step workflows, store agent state, enforce tool permissions, enable         │
+│  human-in-the-loop approvals, and trace all prompts and tool calls                                            │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## Operational Capabilities and Autonomy                                                                     │
+│                                                                                                               │
+│  **Reactive vs. proactive behavior**                                                                          │
+│  - Chatbots are entirely reactive—they respond only when users initiate contact                               │
+│  - AI agents are proactive, breaking down complex needs and executing actions without prompts at each step    │
+│                                                                                                               │
+│  **Task execution scope**                                                                                     │
+│  - Chatbots can tell customers about return policies but cannot process returns                               │
+│  - AI agents can process returns, recommend replacements based on purchase history, flag quality issues, and  │
+│  update multiple backend systems in a single interaction                                                      │
+│                                                                                                               │
+│  **Decision-making authority**                                                                                │
+│  - Chatbots follow scripts or generate text responses to routine questions                                    │
+│  - AI agents are autonomous systems capable of reasoning, planning, and taking actions to achieve goals       │
+│                                                                                                               │
+│  **Real-world performance**                                                                                   │
+│  - During the 2025 holiday season, AI agents handled a 142% surge in complex actions (returns, shipping       │
+│  updates) across multiple systems                                                                             │
+│  - This ability to handle complex transactions—not just answer questions—defines the agentic approach         │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## When to Choose Chatbots vs. AI Agents                                                                     │
+│                                                                                                               │
+│  **Chatbot-appropriate use cases**                                                                            │
+│  - FAQs, checking account balances, booking appointments, sharing store hours                                 │
+│  - High-volume, low-complexity interactions where predictability is valued                                    │
+│  - Simple, low-risk scenarios with limited backend interaction                                                │
+│                                                                                                               │
+│  **AI agent-appropriate use cases**                                                                           │
+│  - Complex support requests spanning multiple systems                                                         │
+│  - Processing loans, fraud detection, supply chain management                                                 │
+│  - Order exchanges requiring data lookup across systems, decision-making, and coordinated actions             │
+│                                                                                                               │
+│  **Implementation timeline and cost**                                                                         │
+│  - Simple chatbot projects: 2-4 weeks, under £15,000                                                          │
+│  - AI agent implementations: £20,000-£70,000+ depending on complexity                                         │
+│  - Simple single-use-case agents: £20-£35k                                                                    │
+│  - Complex multi-system integrations: £60-£90k                                                                │
+│                                                                                                               │
+│  **Recommended phased approach**                                                                              │
+│  1. **Months 1-6**: Implement LLM-powered chatbot to validate adoption (£15k-£25k)                            │
+│  2. **Months 7-12**: Upgrade to AI agents for complex use cases if ROI is positive (£30k-£50k additional)     │
+│  3. **Year 2**: Scale successful agents across departments                                                    │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## Key Limitations and Risks                                                                                 │
+│                                                                                                               │
+│  **Chatbot limitations**                                                                                      │
+│  - Hit a wall when customers ask questions outside rigid scripts                                              │
+│  - Cannot execute independent actions or pull real-time data from external systems                            │
+│  - Require extensive training on hundreds of utterances to understand natural language                        │
+│  - Need dedicated flows for every possible combination of issues                                              │
+│                                                                                                               │
+│  **AI agent limitations**                                                                                     │
+│  - Require deeper system integration and more upfront technical work                                          │
+│  - Higher upfront investment with ROI risk if poorly scoped                                                   │
+│  - Need sophisticated infrastructure with compute costs that scale with every interaction                     │
+│  - Require clear governance controls to monitor and audit autonomous actions                                  │
+│                                                                                                               │
+│  **Data quality dependencies**                                                                                │
+│  - AI agents require thorough initial planning and clean data environments                                    │
+│  - Biased training data leads to biased autonomous decisions that can scale quickly                           │
+│  - Deep database connections demand accurate information to execute actions correctly                         │
+│                                                                                                               │
+│  **Scalability trade-offs**                                                                                   │
+│  - Chatbots are easier to scale—can handle thousands of simultaneous interactions once trained                │
+│  - AI agents require complex state management, memory persistence, and system coordination, making            │
+│  horizontal scaling more architecturally demanding                                                            │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## Open Questions                                                                                            │
+│                                                                                                               │
+│  **Hybrid vs. replacement trajectory**                                                                        │
+│  - Industry experts suggest a "better together story" rather than full replacement                            │
+│  - Customers may use chatbots where they want prescriptive control and agents where they're comfortable with  │
+│  generative AI autonomy                                                                                       │
+│  - Salesforce VP notes "the technology is still evolving, so maybe this changes in a few years"               │
+│                                                                                                               │
+│  **Terminology confusion**                                                                                    │
+│  - Vendors often use "chatbot" and "AI agent" interchangeably, creating evaluation challenges                 │
+│  - The distinction is architectural (predefined scripts vs. runtime reasoning), but this isn't always clear   │
+│  in vendor communications                                                                                     │
+│                                                                                                               │
+│  **Adoption timeline uncertainty**                                                                            │
+│  - Agentic AI market projected to grow from $688.73M (2025) to $25.3B (2035) at 43.4% CAGR                    │
+│  - Unclear whether chatbots will be displaced or continue serving specific niches long-term                   │
+│  - Customer-facing scenarios may see a mix; employee-facing scenarios favor agents due to workflow            │
+│  integration                                                                                                  │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  *Note: This research draws from industry publications and technical analyses published 2024-2026. The field  │
+│  is rapidly evolving—verify specific cost figures, capability claims, and market projections for your         │
+│  context and timeframe.*                                                                                      │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────── 📋 Task Completion ──────────────────────────────────────────────╮
+│                                                                                                               │
+│  Task Completed                                                                                               │
+│  Name: Using the research findings, write a short report on The difference between conversational AI          │
+│  chatbots and Agent AI.                                                                                       │
+│                                                                                                               │
+│  Structure:                                                                                                   │
+│  1. A 2-3 sentence executive summary                                                                          │
+│  2. One section per sub-question, with clear headings                                                         │
+│  3. A short 'Open questions' section if the research flagged any uncertainty                                  │
+│                                                                                                               │
+│  Keep it skimmable — use headings and bullets, not dense paragraphs.                                          │
+│  Agent: Report Writer                                                                                         │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+============================================================
+FINAL REPORT
+============================================================
+# The Difference Between Conversational AI Chatbots and Agent AI
+
+## Executive Summary
+
+Conversational AI chatbots are read-only systems that answer questions and draft responses but require humans to take action, while Agent AI systems are read-write platforms that autonomously execute tasks across multiple backend systems. The core distinction is architectural: chatbots follow predefined scripts and respond reactively, whereas AI agents use reasoning loops to plan, execute, and coordinate multi-step workflows without human intervention at each stage. Businesses should choose chatbots for simple, high-volume FAQ scenarios and AI agents for complex, multi-system tasks—though many organizations are adopting a phased hybrid approach.
+
+---
+
+## Fundamental Architectural Differences
+
+**Read-only vs. read-write capabilities**
+- Chatbots surface answers and draft responses but hand execution to humans
+- AI agents can process refunds, update CRMs, close tickets, and modify backend systems autonomously
+
+**Reasoning and planning**
+- Chatbots follow predefined scripts or generate single responses without multi-step planning
+- AI agents use a "think-act-observe loop" where an LLM reasons about tasks, takes action, observes results, and iterates until goals are achieved
+
+**Memory architecture**
+- Chatbots store simple conversation state (e.g., `order_id=12345`, `intent=order_status`)
+- AI agents require multi-layered memory models including working memory, episodic memory, and long-term memory for open-ended conversations
+
+**Backend integration depth**
+- Chatbot backends primarily handle request/response APIs and store product data
+- AI agent backends manage multi-step workflows, store agent state, enforce tool permissions, enable human-in-the-loop approvals, and trace all prompts and tool calls
+
+---
+
+## Operational Capabilities and Autonomy
+
+**Reactive vs. proactive behavior**
+- Chatbots are entirely reactive—they respond only when users initiate contact
+- AI agents are proactive, breaking down complex needs and executing actions without prompts at each step
+
+**Task execution scope**
+- Chatbots can tell customers about return policies but cannot process returns
+- AI agents can process returns, recommend replacements based on purchase history, flag quality issues, and update multiple backend systems in a single interaction
+
+**Decision-making authority**
+- Chatbots follow scripts or generate text responses to routine questions
+- AI agents are autonomous systems capable of reasoning, planning, and taking actions to achieve goals
+
+**Real-world performance**
+- During the 2025 holiday season, AI agents handled a 142% surge in complex actions (returns, shipping updates) across multiple systems
+- This ability to handle complex transactions—not just answer questions—defines the agentic approach
+
+---
+
+## When to Choose Chatbots vs. AI Agents
+
+**Chatbot-appropriate use cases**
+- FAQs, checking account balances, booking appointments, sharing store hours
+- High-volume, low-complexity interactions where predictability is valued
+- Simple, low-risk scenarios with limited backend interaction
+
+**AI agent-appropriate use cases**
+- Complex support requests spanning multiple systems
+- Processing loans, fraud detection, supply chain management
+- Order exchanges requiring data lookup across systems, decision-making, and coordinated actions
+
+**Implementation timeline and cost**
+- Simple chatbot projects: 2-4 weeks, under £15,000
+- AI agent implementations: £20,000-£70,000+ depending on complexity
+- Simple single-use-case agents: £20-£35k
+- Complex multi-system integrations: £60-£90k
+
+**Recommended phased approach**
+1. **Months 1-6**: Implement LLM-powered chatbot to validate adoption (£15k-£25k)
+2. **Months 7-12**: Upgrade to AI agents for complex use cases if ROI is positive (£30k-£50k additional)
+3. **Year 2**: Scale successful agents across departments
+
+---
+
+## Key Limitations and Risks
+
+**Chatbot limitations**
+- Hit a wall when customers ask questions outside rigid scripts
+- Cannot execute independent actions or pull real-time data from external systems
+- Require extensive training on hundreds of utterances to understand natural language
+- Need dedicated flows for every possible combination of issues
+
+**AI agent limitations**
+- Require deeper system integration and more upfront technical work
+- Higher upfront investment with ROI risk if poorly scoped
+- Need sophisticated infrastructure with compute costs that scale with every interaction
+- Require clear governance controls to monitor and audit autonomous actions
+
+**Data quality dependencies**
+- AI agents require thorough initial planning and clean data environments
+- Biased training data leads to biased autonomous decisions that can scale quickly
+- Deep database connections demand accurate information to execute actions correctly
+
+**Scalability trade-offs**
+- Chatbots are easier to scale—can handle thousands of simultaneous interactions once trained
+- AI agents require complex state management, memory persistence, and system coordination, making horizontal scaling more architecturally demanding
+
+---
+
+## Open Questions
+
+**Hybrid vs. replacement trajectory**
+- Industry experts suggest a "better together story" rather than full replacement
+- Customers may use chatbots where they want prescriptive control and agents where they're comfortable with generative AI autonomy
+- Salesforce VP notes "the technology is still evolving, so maybe this changes in a few years"
+
+**Terminology confusion**
+- Vendors often use "chatbot" and "AI agent" interchangeably, creating evaluation challenges
+- The distinction is architectural (predefined scripts vs. runtime reasoning), but this isn't always clear in vendor communications
+
+**Adoption timeline uncertainty**
+- Agentic AI market projected to grow from $688.73M (2025) to $25.3B (2035) at 43.4% CAGR
+- Unclear whether chatbots will be displaced or continue serving specific niches long-term
+- Customer-facing scenarios may see a mix; employee-facing scenarios favor agents due to workflow integration
+
+---
+
+*Note: This research draws from industry publications and technical analyses published 2024-2026. The field is rapidly evolving—verify specific cost figures, capability claims, and market projections for your context and timeframe.*
+
+Saved to report_output.md
+╭─────────────────────────────────────────────── Crew Completion ───────────────────────────────────────────────╮
+│                                                                                                               │
+│  Crew Execution Completed                                                                                     │
+│  Name: crew                                                                                                   │
+│  ID: 6e68f91f-01d2-4da5-b7b8-0be1850c5dcd                                                                     │
+│  Final Output: # The Difference Between Conversational AI Chatbots and Agent AI                               │
+│                                                                                                               │
+│  ## Executive Summary                                                                                         │
+│                                                                                                               │
+│  Conversational AI chatbots are read-only systems that answer questions and draft responses but require       │
+│  humans to take action, while Agent AI systems are read-write platforms that autonomously execute tasks       │
+│  across multiple backend systems. The core distinction is architectural: chatbots follow predefined scripts   │
+│  and respond reactively, whereas AI agents use reasoning loops to plan, execute, and coordinate multi-step    │
+│  workflows without human intervention at each stage. Businesses should choose chatbots for simple,            │
+│  high-volume FAQ scenarios and AI agents for complex, multi-system tasks—though many organizations are        │
+│  adopting a phased hybrid approach.                                                                           │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## Fundamental Architectural Differences                                                                     │
+│                                                                                                               │
+│  **Read-only vs. read-write capabilities**                                                                    │
+│  - Chatbots surface answers and draft responses but hand execution to humans                                  │
+│  - AI agents can process refunds, update CRMs, close tickets, and modify backend systems autonomously         │
+│                                                                                                               │
+│  **Reasoning and planning**                                                                                   │
+│  - Chatbots follow predefined scripts or generate single responses without multi-step planning                │
+│  - AI agents use a "think-act-observe loop" where an LLM reasons about tasks, takes action, observes          │
+│  results, and iterates until goals are achieved                                                               │
+│                                                                                                               │
+│  **Memory architecture**                                                                                      │
+│  - Chatbots store simple conversation state (e.g., `order_id=12345`, `intent=order_status`)                   │
+│  - AI agents require multi-layered memory models including working memory, episodic memory, and long-term     │
+│  memory for open-ended conversations                                                                          │
+│                                                                                                               │
+│  **Backend integration depth**                                                                                │
+│  - Chatbot backends primarily handle request/response APIs and store product data                             │
+│  - AI agent backends manage multi-step workflows, store agent state, enforce tool permissions, enable         │
+│  human-in-the-loop approvals, and trace all prompts and tool calls                                            │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## Operational Capabilities and Autonomy                                                                     │
+│                                                                                                               │
+│  **Reactive vs. proactive behavior**                                                                          │
+│  - Chatbots are entirely reactive—they respond only when users initiate contact                               │
+│  - AI agents are proactive, breaking down complex needs and executing actions without prompts at each step    │
+│                                                                                                               │
+│  **Task execution scope**                                                                                     │
+│  - Chatbots can tell customers about return policies but cannot process returns                               │
+│  - AI agents can process returns, recommend replacements based on purchase history, flag quality issues, and  │
+│  update multiple backend systems in a single interaction                                                      │
+│                                                                                                               │
+│  **Decision-making authority**                                                                                │
+│  - Chatbots follow scripts or generate text responses to routine questions                                    │
+│  - AI agents are autonomous systems capable of reasoning, planning, and taking actions to achieve goals       │
+│                                                                                                               │
+│  **Real-world performance**                                                                                   │
+│  - During the 2025 holiday season, AI agents handled a 142% surge in complex actions (returns, shipping       │
+│  updates) across multiple systems                                                                             │
+│  - This ability to handle complex transactions—not just answer questions—defines the agentic approach         │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## When to Choose Chatbots vs. AI Agents                                                                     │
+│                                                                                                               │
+│  **Chatbot-appropriate use cases**                                                                            │
+│  - FAQs, checking account balances, booking appointments, sharing store hours                                 │
+│  - High-volume, low-complexity interactions where predictability is valued                                    │
+│  - Simple, low-risk scenarios with limited backend interaction                                                │
+│                                                                                                               │
+│  **AI agent-appropriate use cases**                                                                           │
+│  - Complex support requests spanning multiple systems                                                         │
+│  - Processing loans, fraud detection, supply chain management                                                 │
+│  - Order exchanges requiring data lookup across systems, decision-making, and coordinated actions             │
+│                                                                                                               │
+│  **Implementation timeline and cost**                                                                         │
+│  - Simple chatbot projects: 2-4 weeks, under £15,000                                                          │
+│  - AI agent implementations: £20,000-£70,000+ depending on complexity                                         │
+│  - Simple single-use-case agents: £20-£35k                                                                    │
+│  - Complex multi-system integrations: £60-£90k                                                                │
+│                                                                                                               │
+│  **Recommended phased approach**                                                                              │
+│  1. **Months 1-6**: Implement LLM-powered chatbot to validate adoption (£15k-£25k)                            │
+│  2. **Months 7-12**: Upgrade to AI agents for complex use cases if ROI is positive (£30k-£50k additional)     │
+│  3. **Year 2**: Scale successful agents across departments                                                    │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## Key Limitations and Risks                                                                                 │
+│                                                                                                               │
+│  **Chatbot limitations**                                                                                      │
+│  - Hit a wall when customers ask questions outside rigid scripts                                              │
+│  - Cannot execute independent actions or pull real-time data from external systems                            │
+│  - Require extensive training on hundreds of utterances to understand natural language                        │
+│  - Need dedicated flows for every possible combination of issues                                              │
+│                                                                                                               │
+│  **AI agent limitations**                                                                                     │
+│  - Require deeper system integration and more upfront technical work                                          │
+│  - Higher upfront investment with ROI risk if poorly scoped                                                   │
+│  - Need sophisticated infrastructure with compute costs that scale with every interaction                     │
+│  - Require clear governance controls to monitor and audit autonomous actions                                  │
+│                                                                                                               │
+│  **Data quality dependencies**                                                                                │
+│  - AI agents require thorough initial planning and clean data environments                                    │
+│  - Biased training data leads to biased autonomous decisions that can scale quickly                           │
+│  - Deep database connections demand accurate information to execute actions correctly                         │
+│                                                                                                               │
+│  **Scalability trade-offs**                                                                                   │
+│  - Chatbots are easier to scale—can handle thousands of simultaneous interactions once trained                │
+│  - AI agents require complex state management, memory persistence, and system coordination, making            │
+│  horizontal scaling more architecturally demanding                                                            │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  ## Open Questions                                                                                            │
+│                                                                                                               │
+│  **Hybrid vs. replacement trajectory**                                                                        │
+│  - Industry experts suggest a "better together story" rather than full replacement                            │
+│  - Customers may use chatbots where they want prescriptive control and agents where they're comfortable with  │
+│  generative AI autonomy                                                                                       │
+│  - Salesforce VP notes "the technology is still evolving, so maybe this changes in a few years"               │
+│                                                                                                               │
+│  **Terminology confusion**                                                                                    │
+│  - Vendors often use "chatbot" and "AI agent" interchangeably, creating evaluation challenges                 │
+│  - The distinction is architectural (predefined scripts vs. runtime reasoning), but this isn't always clear   │
+│  in vendor communications                                                                                     │
+│                                                                                                               │
+│  **Adoption timeline uncertainty**                                                                            │
+│  - Agentic AI market projected to grow from $688.73M (2025) to $25.3B (2035) at 43.4% CAGR                    │
+│  - Unclear whether chatbots will be displaced or continue serving specific niches long-term                   │
+│  - Customer-facing scenarios may see a mix; employee-facing scenarios favor agents due to workflow            │
+│  integration                                                                                                  │
+│                                                                                                               │
+│  ---                                                                                                          │
+│                                                                                                               │
+│  *Note: This research draws from industry publications and technical analyses published 2024-2026. The field  │
+│  is rapidly evolving—verify specific cost figures, capability claims, and market projections for your         │
+│  context and timeframe.*                                                                                      │
+│                                                                                                               │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────── Tracing Status ────────────────────────────────────────────────╮
+│                                                                                                               │
+│  Info: Tracing is disabled.                                                                                   │
+│                                                                                                               │
+│  To enable tracing, do any one of these:                                                                      │
+│  • Set tracing=True in your Crew/Flow code                                                                    │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file                                                │
+│  • Run: crewai traces enable                                                                                  │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
