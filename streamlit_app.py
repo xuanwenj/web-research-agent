@@ -65,10 +65,20 @@ if st.button("Run", type="primary", disabled=not topic):
     # this is the same log you've been reading manually, just redirected.
     log_buffer = io.StringIO()
 
+    # Live progress: updated in place as the crew works, so a long run
+    # doesn't look identical to a stuck one.
+    status = st.empty()
+    status.caption("Starting up...")
+
     with st.spinner("Researching and writing — this usually takes a minute or two..."):
         with contextlib.redirect_stdout(log_buffer):
-            report = run(topic)
+            report = run(
+                topic,
+                on_step=lambda msg: status.caption(f"🔄 {msg}"),
+                on_task_done=lambda msg: status.caption(f"✅ {msg}"),
+            )
 
+    status.empty()
     st.success("Done!")
     st.markdown(report)
 

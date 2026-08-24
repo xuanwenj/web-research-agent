@@ -13,6 +13,7 @@ at the bottom of this file for how to plug in a live search tool
 """
 
 import os
+import sys
 from crewai import Agent, Task, Crew, Process, LLM
 from crewai_tools import TavilySearchTool
 
@@ -26,8 +27,15 @@ from crewai_tools import TavilySearchTool
 # ---------------------------------------------------------------------------
 
 
-def build_crew() -> Crew:
-    """Construct the LLM, agents, tasks, and crew, and return the crew."""
+def build_crew(on_step=None, on_task_done=None) -> Crew:
+    """Construct the LLM, agents, tasks, and crew, and return the crew.
+
+    `on_step` (optional) is called with a short string every time an agent
+    takes an action (thinking, calling a tool, etc). `on_task_done` (optional)
+    is called with a short string whenever a task (research or writing)
+    finishes. Both let a caller like the Streamlit UI show live progress
+    instead of one long, silent spinner.
+    """
     # CrewAI uses LiteLLM under the hood, so Claude models are addressed as
     # "anthropic/<model-name>". Set your API key as an environment variable
     # before running: export ANTHROPIC_API_KEY="sk-ant-..."
@@ -104,17 +112,54 @@ def build_crew() -> Crew:
         context=[research_task],
     )
 
+    # These wrap the caller's callbacks defensively: CrewAI's step/task
+    # objects can vary between versions, so we don't want a callback
+    # failure to crash an otherwise-successful run.
+    # Printed to stderr (not stdout) so it bypasses the Streamlit UI's
+    # stdout capture and shows up live in the server-side logs for debugging.
+    def _step_callback(step):
+        try:
+            role = getattr(getattr(step, "agent", None), "role", None)
+            tool = getattr(step, "tool", None)
+            message = (
+                f"{role or 'Agent'} is using tool: {tool}"
+                if tool
+                else f"{role or 'Agent'} is thinking..."
+            )
+        except Exception:
+            message = "Working..."
+        print(f"[research_crew] {message}", file=sys.stderr)
+        if on_step:
+            on_step(message)
+
+    def _task_callback(output):
+        try:
+            agent_role = getattr(output, "agent", None)
+            message = f"Finished: {agent_role or 'a task'}"
+        except Exception:
+            message = "Finished a task"
+        print(f"[research_crew] {message}", file=sys.stderr)
+        if on_task_done:
+            on_task_done(message)
+
     return Crew(
         agents=[researcher, writer],
         tasks=[research_task, writing_task],
         process=Process.sequential,  # researcher runs first, then writer
         verbose=True,
+        step_callback=_step_callback if on_step else None,
+        task_callback=_task_callback if on_task_done else None,
     )
 
 
-def run(topic: str) -> str:
-    """Run the crew on a given topic and return the final report."""
-    result = build_crew().kickoff(inputs={"topic": topic})
+def run(topic: str, on_step=None, on_task_done=None) -> str:
+    """Run the crew on a given topic and return the final report.
+
+    `on_step`/`on_task_done` are optional progress callbacks — see
+    `build_crew` for details.
+    """
+    crew = build_crew(on_step=on_step, on_task_done=on_task_done)
+    result = crew.kickoff(inputs={"topic": topic})
     return str(result)
 
 
