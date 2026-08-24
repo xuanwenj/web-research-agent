@@ -44,7 +44,14 @@ if missing_keys:
 # Imported only after the key check above: research_crew builds its LLM/tool
 # clients from these env vars, so importing it first would crash the whole
 # page (blank screen) instead of showing the friendly error above.
-from research_crew import run
+# Wrapped in try/except so a bad import (missing dependency, bad module) shows
+# a visible traceback instead of silently leaving the page blank.
+try:
+    from research_crew import run
+except Exception as e:
+    st.error("Failed to import research_crew:")
+    st.exception(e)
+    st.stop()
 
 topic = st.text_input(
     "What should the crew research?",
