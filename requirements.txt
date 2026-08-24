@@ -1,2 +1,7 @@
 crewai[tools,anthropic]
+# crewai[tools] installs the crewai-tools package but not tavily-python
+# itself (that's gated behind crewai-tools' own "tavily-python" extra),
+# so TavilySearchTool() would otherwise fall back to an interactive
+# "install it?" prompt that hangs forever on a server.
+tavily-python
 streamlit
