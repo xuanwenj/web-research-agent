@@ -17,8 +17,6 @@ import os
 
 import streamlit as st
 
-from research_crew import run
-
 st.set_page_config(page_title="Web Research Agent", page_icon="🔎")
 
 st.title("🔎 Web Research Agent")
@@ -38,9 +36,15 @@ missing_keys = [
 if missing_keys:
     st.error(
         f"Missing environment variable(s): {', '.join(missing_keys)}. "
-        "Set them in your terminal before running `streamlit run streamlit_app.py`."
+        "Set them in your terminal before running `streamlit run streamlit_app.py`, "
+        "or under your Streamlit Cloud app's Settings \u2192 Secrets."
     )
     st.stop()
+
+# Imported only after the key check above: research_crew builds its LLM/tool
+# clients from these env vars, so importing it first would crash the whole
+# page (blank screen) instead of showing the friendly error above.
+from research_crew import run
 
 topic = st.text_input(
     "What should the crew research?",
