@@ -36,6 +36,7 @@ def build_crew(on_step=None, on_task_done=None) -> Crew:
     finishes. Both let a caller like the Streamlit UI show live progress
     instead of one long, silent spinner.
     """
+    print("[research_crew] build_crew() starting", file=sys.stderr)
     # CrewAI uses LiteLLM under the hood, so Claude models are addressed as
     # "anthropic/<model-name>". Set your API key as an environment variable
     # before running: export ANTHROPIC_API_KEY="sk-ant-..."
@@ -43,11 +44,13 @@ def build_crew(on_step=None, on_task_done=None) -> Crew:
         model="anthropic/claude-sonnet-4-5-20250929",
         temperature=0.3,
     )
+    print("[research_crew] LLM constructed", file=sys.stderr)
 
     # The Researcher's tool: real web search. Giving an agent a `tools` list
     # is what lets it decide *for itself*, mid-reasoning, when it needs to
     # look something up rather than answering from memory alone.
     search_tool = TavilySearchTool()
+    print("[research_crew] TavilySearchTool constructed", file=sys.stderr)
 
     researcher = Agent(
         role="Research Analyst",
@@ -158,8 +161,11 @@ def run(topic: str, on_step=None, on_task_done=None) -> str:
     `on_step`/`on_task_done` are optional progress callbacks — see
     `build_crew` for details.
     """
+    print(f"[research_crew] run() called with topic={topic!r}", file=sys.stderr)
     crew = build_crew(on_step=on_step, on_task_done=on_task_done)
+    print("[research_crew] crew built, calling kickoff()", file=sys.stderr)
     result = crew.kickoff(inputs={"topic": topic})
+    print("[research_crew] kickoff() finished", file=sys.stderr)
     return str(result)
 
 
