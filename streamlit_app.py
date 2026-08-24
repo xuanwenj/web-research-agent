@@ -14,8 +14,10 @@ Run with:
 import contextlib
 import io
 import os
+import threading
 
 import streamlit as st
+from streamlit.runtime.scriptrunner import add_script_run_ctx, get_script_run_ctx
 
 st.set_page_config(page_title="Web Research Agent", page_icon="🔎")
 
@@ -70,12 +72,22 @@ if st.button("Run", type="primary", disabled=not topic):
     status = st.empty()
     status.caption("Starting up...")
 
+    # CrewAI invokes these callbacks from its own background thread, which
+    # doesn't have Streamlit's script context attached by default — calling
+    # a Streamlit UI method from it raises NoSessionContext and crashes the
+    # whole run. Attaching the current context to that thread first fixes it.
+    ctx = get_script_run_ctx()
+
+    def _update_status(prefix: str, msg: str) -> None:
+        add_script_run_ctx(threading.current_thread(), ctx)
+        status.caption(f"{prefix} {msg}")
+
     with st.spinner("Researching and writing — this usually takes a minute or two..."):
         with contextlib.redirect_stdout(log_buffer):
             report = run(
                 topic,
-                on_step=lambda msg: status.caption(f"🔄 {msg}"),
-                on_task_done=lambda msg: status.caption(f"✅ {msg}"),
+                on_step=lambda msg: _update_status("🔄", msg),
+                on_task_done=lambda msg: _update_status("✅", msg),
             )
 
     status.empty()
