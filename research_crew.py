@@ -180,6 +180,9 @@ def run(topic: str, on_step=None, on_task_done=None) -> str:
     try:
         print("[research_crew] crew built, calling kickoff()", file=sys.stderr)
         result = crew.kickoff(inputs={"topic": topic})
+        # Handlers run on the bus's own worker, not inline with emit(), so
+        # without this the count can still be behind right after kickoff().
+        crewai_event_bus.flush()
         print("[research_crew] kickoff() finished", file=sys.stderr)
     finally:
         # Unregister so repeated runs (e.g. multiple Streamlit clicks in the
