@@ -16,6 +16,8 @@ import os
 import sys
 from datetime import datetime, timezone
 from crewai import Agent, Task, Crew, Process, LLM
+from crewai.events import crewai_event_bus
+from crewai.events.types.tool_usage_events import ToolUsageFinishedEvent
 from crewai_tools import TavilySearchTool
 
 # ---------------------------------------------------------------------------
@@ -28,13 +30,8 @@ from crewai_tools import TavilySearchTool
 # ---------------------------------------------------------------------------
 
 
-def build_crew(on_step=None, on_task_done=None) -> tuple[Crew, list[int]]:
-    """Construct the LLM, agents, tasks, and crew.
-
-    Returns `(crew, search_call_count)`: `search_call_count` is a one-item
-    list holding the number of tool (web search) calls made so far, updated
-    live as the crew runs and readable by the caller once `kickoff()` is
-    done.
+def build_crew(on_step=None, on_task_done=None) -> Crew:
+    """Construct the LLM, agents, tasks, and crew, and return the crew.
 
     `on_step` (optional) is called with a short string every time an agent
     takes an action (thinking, calling a tool, etc). `on_task_done` (optional)
@@ -126,16 +123,10 @@ def build_crew(on_step=None, on_task_done=None) -> tuple[Crew, list[int]]:
     # failure to crash an otherwise-successful run.
     # Printed to stderr (not stdout) so it bypasses the Streamlit UI's
     # stdout capture and shows up live in the server-side logs for debugging.
-    # Counts tool calls (i.e. live web searches) made during the run.
-    # A one-item list, not a plain int, so the closure below can mutate it.
-    search_call_count = [0]
-
     def _step_callback(step):
         try:
             role = getattr(getattr(step, "agent", None), "role", None)
             tool = getattr(step, "tool", None)
-            if tool:
-                search_call_count[0] += 1
             message = (
                 f"{role or 'Agent'} is using tool: {tool}"
                 if tool
@@ -162,12 +153,10 @@ def build_crew(on_step=None, on_task_done=None) -> tuple[Crew, list[int]]:
         tasks=[research_task, writing_task],
         process=Process.sequential,  # researcher runs first, then writer
         verbose=True,
-        # Always registered (regardless of on_step) so search_call_count
-        # stays accurate even when the caller doesn't want progress updates.
-        step_callback=_step_callback,
+        step_callback=_step_callback if on_step else None,
         task_callback=_task_callback if on_task_done else None,
     )
-    return crew, search_call_count
+    return crew
 
 
 def run(topic: str, on_step=None, on_task_done=None) -> str:
@@ -177,10 +166,25 @@ def run(topic: str, on_step=None, on_task_done=None) -> str:
     `build_crew` for details.
     """
     print(f"[research_crew] run() called with topic={topic!r}", file=sys.stderr)
-    crew, search_call_count = build_crew(on_step=on_step, on_task_done=on_task_done)
-    print("[research_crew] crew built, calling kickoff()", file=sys.stderr)
-    result = crew.kickoff(inputs={"topic": topic})
-    print("[research_crew] kickoff() finished", file=sys.stderr)
+    crew = build_crew(on_step=on_step, on_task_done=on_task_done)
+
+    # Counts live web searches by listening for CrewAI's own tool-usage
+    # event, rather than the step_callback (whose `step` object doesn't
+    # reliably expose which tool was used across CrewAI versions).
+    search_call_count = [0]
+
+    def _on_tool_finished(source, event):
+        search_call_count[0] += 1
+
+    crewai_event_bus.on(ToolUsageFinishedEvent)(_on_tool_finished)
+    try:
+        print("[research_crew] crew built, calling kickoff()", file=sys.stderr)
+        result = crew.kickoff(inputs={"topic": topic})
+        print("[research_crew] kickoff() finished", file=sys.stderr)
+    finally:
+        # Unregister so repeated runs (e.g. multiple Streamlit clicks in the
+        # same process) don't stack listeners and inflate later counts.
+        crewai_event_bus.off(ToolUsageFinishedEvent, _on_tool_finished)
 
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     footer = (
