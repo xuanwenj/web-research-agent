@@ -69,6 +69,7 @@ def build_crew(on_step=None, on_task_done=None) -> Crew:
         ),
         llm=llm,
         tools=[search_tool],
+        max_iter=6,  # hard cap on reasoning/search rounds
         verbose=True,
     )
 
@@ -94,11 +95,17 @@ def build_crew(on_step=None, on_task_done=None) -> Crew:
             "Research the topic: {topic}\n\n"
             "Break it into 3-5 key sub-questions, and answer each one with "
             "specific, factual points. Note any areas of genuine uncertainty "
-            "or debate rather than presenting them as settled."
+            "or debate rather than presenting them as settled.\n\n"
+            "Search budget: at most 6 searches in total, 1-2 per sub-question. "
+            "Issue the searches for different sub-questions in parallel in a "
+            "single step, and do not search again for a topic you have already "
+            "covered. Once you have used the budget, stop searching and answer."
         ),
         expected_output=(
-            "A structured set of findings: one heading per sub-question, "
-            "with 2-4 factual bullet points under each."
+            "Concise research notes: one heading per sub-question, with 2-3 "
+            "short bullets each (max ~20 words per bullet), each bullet "
+            "followed by its source URL. No introduction, no conclusion, no "
+            "polished prose."
         ),
         agent=researcher,
     )
